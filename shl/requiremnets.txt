@@ -1,6 +1,7 @@
 streamlit
-pandas
-sentence-transformers
-torch
 fastapi
 uvicorn
+pandas
+numpy
+scikit-learn
+nltk
