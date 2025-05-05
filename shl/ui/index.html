@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHL Test Recommender</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button { padding: 10px; width: 300px; margin-top: 10px; }
+    .result { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>SHL Test Recommender</h1>
+  <p>Enter a job role or requirement:</p>
+  <input id="queryInput" placeholder="e.g. Data Analyst with problem-solving" />
+  <br/>
+  <button onclick="getRecommendations()">Get Recommendations</button>
+
+  <div id="results"></div>
+
+  <script>
+    async function getRecommendations() {
+      const query = document.getElementById('queryInput').value;
+      const res = await fetch(`http://127.0.0.1:8000/recommend?query=${encodeURIComponent(query)}`);
+      const data = await res.json();
+
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = "<h2>Recommendations:</h2>";
+
+      data.recommendations.forEach(rec => {
+        resultsDiv.innerHTML += `
+          <div class="result">
+            <strong>${rec["Product Name"]}</strong><br/>
+            <a href="${rec["Link"]}" target="_blank">View Test</a><br/>
+            <b>Test Types:</b> ${rec["Test Types"]}<br/>
+            <b>Remote:</b> ${rec["Remote Testing"]} | 
+            <b>Adaptive:</b> ${rec["Adaptive/IRT"]}<br/>
+            <b>Score:</b> ${rec["Similarity Score"].toFixed(2)}
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
