@@ -1,9 +1,0 @@
-streamlit
-fastapi
-uvicorn
-pandas
-numpy
-scikit-learn
-nltk
-sentence-transformers
-
