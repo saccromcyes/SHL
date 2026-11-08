@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assessment shortlister</title>
+  <meta name="description" content="Paste a job description and get a balanced shortlist of SHL assessments that fits your time budget, with a reason for every pick.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230E6B4D'/><rect x='6' y='9' width='8' height='14' rx='2' fill='white'/><rect x='16' y='9' width='5' height='14' rx='2' fill='white' opacity='.75'/><rect x='23' y='9' width='3' height='14' rx='1.5' fill='white' opacity='.5'/></svg>">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a href="/" class="brand">
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--green)"/><rect x="6" y="9" width="8" height="14" rx="2" fill="#fff"/><rect x="16" y="9" width="5" height="14" rx="2" fill="#fff" opacity=".75"/><rect x="23" y="9" width="3" height="14" rx="1.5" fill="#fff" opacity=".5"/></svg>
+        Assessment shortlister
+      </a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#" data-view="find" aria-current="page">Find assessments</a>
+        <a href="#accuracy" data-view="accuracy">Accuracy</a>
+        <a href="/api/docs">API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="view-find">
+      <div class="hero">
+        <h1>Which tests should this candidate take?</h1>
+        <p class="lede">Paste a job description, a link to one, or a plain request. You get up to ten assessments from the SHL catalog that cover the role, fit your time limit, and come with a reason for each.</p>
+      </div>
+
+      <form id="form" class="composer" autocomplete="off">
+        <label for="query" class="sr-only">Job description or request</label>
+        <textarea id="query" rows="4" maxlength="20000" required placeholder="We're hiring Java developers who also work closely with business stakeholders. Each test should take 40 minutes or less."></textarea>
+        <div class="composer-foot">
+          <span class="hint" id="hint">Tip: paste a link to a job posting and it will be read for you.</span>
+          <button type="submit" class="go" id="go">Find assessments</button>
+        </div>
+      </form>
+
+      <div class="examples" id="examples">
+        <span class="examples-label">Try:</span>
+        <button type="button">Mid-level developer: Python, SQL and JavaScript, max 60 minutes</button>
+        <button type="button">Entry-level call centre agents; check spoken English and how they handle calls</button>
+        <button type="button">Analyst role, cognitive and personality tests within 45 minutes</button>
+        <button type="button">Production line operators who follow safety rules, each test under 20 minutes</button>
+      </div>
+
+      <p class="error" id="error" role="alert" hidden></p>
+
+      <div id="results" hidden>
+        <section class="understood" aria-labelledby="understood-h">
+          <h2 id="understood-h">What I understood</h2>
+          <p class="summary" id="summary"></p>
+          <div class="fields">
+            <div class="field skills-field">
+              <span class="field-label">Skills to cover</span>
+              <div class="chips" id="skills"></div>
+            </div>
+            <label class="field">
+              <span class="field-label">Time limit per test</span>
+              <span class="minutes-input"><input type="number" id="max-minutes" min="1" max="600" placeholder="none"> min</span>
+            </label>
+            <label class="field">
+              <span class="field-label">Job level</span>
+              <select id="job-level">
+                <option value="">Any</option>
+                <option>Entry-Level</option><option>Graduate</option><option>Mid-Professional</option>
+                <option>Manager</option><option>Director</option><option>Executive</option>
+              </select>
+            </label>
+            <label class="field check">
+              <input type="checkbox" id="remote">
+              <span>Remote testing only</span>
+            </label>
+            <button type="button" class="secondary" id="rerun">Update shortlist</button>
+          </div>
+          <p class="fetched" id="fetched" hidden></p>
+        </section>
+
+        <section class="battery" aria-labelledby="battery-h">
+          <div class="battery-head">
+            <h2 id="battery-h">Suggested battery</h2>
+            <span class="battery-total" id="battery-total"></span>
+          </div>
+          <div class="timeline" id="timeline" role="img"></div>
+          <div class="timeline-scale" id="timeline-scale"></div>
+          <p class="battery-note">The highest-ranked tests that fit the time budget together, favouring a mix of test types.</p>
+        </section>
+
+        <section aria-labelledby="list-h">
+          <h2 id="list-h" class="list-h">Shortlist</h2>
+          <ol class="list" id="list"></ol>
+        </section>
+
+        <details class="how" id="how">
+          <summary>How this shortlist was made</summary>
+          <ol class="steps" id="steps"></ol>
+        </details>
+      </div>
+    </section>
+
+    <section id="view-accuracy" hidden>
+      <div class="hero">
+        <h1>How accurate is it?</h1>
+        <p class="lede">The recommender is tested on 28 hiring requests, each labelled by hand with the catalog assessments a recruiter would expect. Recall@10 is the share of those expected assessments that appear in the top ten; MAP@10 also rewards ranking them higher. Each row adds one stage of the pipeline.</p>
+      </div>
+      <div id="accuracy-body"><p class="muted">Loading…</p></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Built by <a href="https://github.com/saccromcyes">Aakarsh Dutt Sharma</a>. <a href="https://github.com/saccromcyes/SHL">Source code</a>. Catalog data comes from SHL's public product catalog; this project is not affiliated with SHL.</p>
+    </div>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
