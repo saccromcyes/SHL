@@ -42,7 +42,7 @@ flowchart LR
 28 hiring requests, each labelled by hand with the assessments a recruiter would expect (169 labels in [`eval/labeled_queries.jsonl`](eval/labeled_queries.jsonl)). Each row is one configuration of the pipeline, so the table shows what each stage contributes, including the one that didn't help.
 
 <!-- EVAL:START -->
-_Last run 2026-11-14, commit `8281b16`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
+_Last run 2026-11-14, commit `190fff1`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
 
 | Pipeline stage | Mean Recall@10 | MAP@10 |
 |---|---|---|
@@ -50,7 +50,7 @@ _Last run 2026-11-14, commit `8281b16`, embeddings `BAAI/bge-small-en-v1.5`, LLM
 | Embedding search | 0.704 | 0.583 |
 | **Hybrid (RRF): default without an LLM** | **0.782** | 0.692 |
 | Hybrid + one search per skill (rule parsing) | 0.756 | 0.647 |
-| Hybrid + per-skill search + balanced selection | 0.756 | 0.663 |
+| Hybrid + per-skill search + balanced selection | 0.756 | 0.661 |
 <!-- EVAL:END -->
 
 The labels were written for this project rather than taken from SHL, so treat absolute numbers as indicative; the comparison between stages is the useful part.
