@@ -27,10 +27,18 @@ K = 10
 STAGES = [
     ("bm25", "Keyword search (BM25)", Options(retrieval="bm25", decompose=False, rerank="none")),
     ("dense", "Embedding search", Options(retrieval="dense", decompose=False, rerank="none")),
-    ("hybrid", "Hybrid (RRF)", Options(retrieval="hybrid", decompose=False, rerank="none")),
-    ("hybrid_multi", "+ one search per skill", Options(retrieval="hybrid", decompose=True, rerank="none")),
-    ("hybrid_multi_balanced", "+ balanced selection", Options(retrieval="hybrid", decompose=True, rerank="balanced")),
-    ("full_llm", "+ LLM rerank (full pipeline)", Options(retrieval="hybrid", decompose=True, rerank="llm")),
+    ("hybrid", "Hybrid (RRF): default without an LLM", Options(retrieval="hybrid", decompose=False, rerank="none")),
+    ("hybrid_multi", "Hybrid + one search per skill (rule parsing)", Options(retrieval="hybrid", decompose=True, rerank="none")),
+    (
+        "hybrid_multi_balanced",
+        "Hybrid + per-skill search + balanced selection",
+        Options(retrieval="hybrid", decompose=True, rerank="balanced"),
+    ),
+    (
+        "full_llm",
+        "LLM parsing + per-skill search + LLM rerank (full pipeline)",
+        Options(retrieval="hybrid", decompose=True, rerank="llm"),
+    ),
 ]
 
 
@@ -62,8 +70,9 @@ def render_markdown(report: dict) -> str:
         "| Pipeline stage | Mean Recall@10 | MAP@10 |",
         "|---|---|---|",
     ]
+    best = max(report["stages"], key=lambda r: (r["recall@10"], r["map@10"]))
     for row in report["stages"]:
-        bold = "**" if row is report["stages"][-1] else ""
+        bold = "**" if row is best else ""
         lines.append(f"| {bold}{row['label']}{bold} | {bold}{row['recall@10']:.3f}{bold} | {row['map@10']:.3f} |")
     return "\n".join(lines) + "\n"
 

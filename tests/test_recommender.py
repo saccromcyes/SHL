@@ -82,7 +82,10 @@ def test_java_request_returns_java_tests_within_time_limit(rec):
 
 
 def test_balanced_selection_covers_every_skill(rec):
-    names = [r["name"] for r in rec.recommend("Python, SQL and JavaScript developer", Options(rerank="balanced"))["results"]]
+    names = [
+        r["name"]
+        for r in rec.recommend("Python, SQL and JavaScript developer", Options(decompose=True, rerank="balanced"))["results"]
+    ]
     for skill in ("Python", "SQL", "JavaScript"):
         assert any(skill in n for n in names), skill
 
@@ -151,3 +154,10 @@ def test_recommender_falls_back_when_llm_errors(rec, monkeypatch):
     assert out["requirements"]["parsed_by"] == "rules"
     assert out["pipeline"]["reranked_by"] == "balanced"
     monkeypatch.setattr(rec, "llm", None)
+
+
+def test_decomposition_is_automatic_only_with_llm_parsing(rec):
+    out = rec.recommend("Python, SQL and JavaScript developer")
+    assert out["pipeline"]["parsed_by"] == "rules"
+    assert out["pipeline"]["decomposed"] is False
+    assert out["search_queries"] == ["Python, SQL and JavaScript developer"]
