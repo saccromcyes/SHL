@@ -1,0 +1,2896 @@
+{
+  "run_at": "2026-11-14T20:49:49+00:00",
+  "commit": "1b9c519",
+  "embedder": "BAAI/bge-small-en-v1.5",
+  "llm": null,
+  "n_queries": 28,
+  "n_labels": 169,
+  "stages": [
+    {
+      "stage": "bm25",
+      "label": "Keyword search (BM25)",
+      "recall@10": 0.707,
+      "map@10": 0.605,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "Hiring Java developers who can also collaborate effectively with business teams. Each assessment must fit in 40 minutes.",
+          "recall@10": 0.571,
+          "returned": [
+            "Business Communications",
+            "Business Communication (adaptive)",
+            "Informatica (Developer) (New)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java 8 (New)",
+            "Java Design Patterns (New)",
+            "Java Frameworks (New)",
+            "Core Java (Advanced Level) (New)",
+            "Enterprise Java Beans (New)"
+          ],
+          "missed": [
+            "Core Java (Entry Level) (New)",
+            "Interpersonal Communications",
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q02",
+          "query": "Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Max 60 minutes.",
+          "recall@10": 1.0,
+          "returned": [
+            "Python (New)",
+            "JavaScript (New)",
+            "SQL (New)",
+            "Automata - SQL (New)",
+            "SQL Server (New)",
+            "Automata Front End",
+            "SQL Server Integration Services (SSIS) (New)",
+            "Microsoft SQL Server 2014 Programming",
+            "SQL Server Reporting Services (SSRS) (New)",
+            "SQL Server Analysis Services (SSAS) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q03",
+          "query": "I am hiring an analyst and want to screen applicants with cognitive and personality tests within 45 minutes.",
+          "recall@10": 0.333,
+          "returned": [
+            "Verify - General Ability Screen",
+            "Data Entry Ten Key Split Screen",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Split Screen Typing Test - Form 1",
+            "Data Entry Numeric Split Screen - US",
+            "Multitasking Ability",
+            "SHL Verify Interactive G+",
+            "Verify - Technical Checking - Next Generation",
+            "Verify Interactive Process Monitoring",
+            "Verify - Numerical Ability"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r",
+            "SHL Verify Interactive \u2013 Numerical Reasoning",
+            "Verify - Deductive Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Working with Information"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Entry-level call center agents. I need to check spoken English and how they handle customer calls.",
+          "recall@10": 0.444,
+          "returned": [
+            "Contact Center Call Simulation (New)",
+            "Customer Service Phone Simulation",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (US) (New)",
+            "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (Indian Accent) (New)",
+            "Customer Service Phone Solution",
+            "Entry Level Cashier Solution",
+            "Entry Level Hotel Front Desk Solution"
+          ],
+          "missed": [
+            "Conversational Multichat Simulation",
+            "English Comprehension (New)",
+            "Entry Level Customer Service (General) Solution",
+            "SVAR - Spoken English (Indian Accent)  (New)",
+            "SVAR - Spoken English (US)  (New)"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "Data scientist with strong statistics, machine learning and Python or R.",
+          "recall@10": 0.857,
+          "returned": [
+            "R Programming (New)",
+            "Automata Data Science (New)",
+            "Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "Python (New)",
+            "Basic Statistics (New)",
+            "Power System Engineering (New)",
+            "Mechanical Engineering (New)",
+            "Electrical Engineering (New)",
+            "Data Warehousing Concepts"
+          ],
+          "missed": [
+            "Statistical Analysis System (New)"
+          ]
+        },
+        {
+          "id": "q06",
+          "query": "Front-end developer: React, HTML/CSS and JavaScript. Under 30 minutes per test.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automata Front End",
+            "JavaScript (New)",
+            "HTML/CSS (New)",
+            "Informatica (Developer) (New)",
+            "Split Screen Typing Test - Form 1",
+            "ReactJS (New)",
+            "Dependability and Safety Instrument (DSI)",
+            "Smart Interview Live",
+            "ASP.NET 4.5",
+            "Front Office Management (New)"
+          ],
+          "missed": [
+            "CSS3 (New)",
+            "HTML5 (New)"
+          ]
+        },
+        {
+          "id": "q07",
+          "query": "DevOps engineer comfortable with Docker, Kubernetes, Jenkins and Linux.",
+          "recall@10": 0.625,
+          "returned": [
+            "Docker (New)",
+            "Kubernetes (New)",
+            "Jenkins (New)",
+            "Linux Programming (General)",
+            "Linux Administration (New)",
+            "Linux Operating System"
+          ],
+          "missed": [
+            "Cloud Computing (New)",
+            "GIT (New)",
+            "Shell Scripting (New)"
+          ]
+        },
+        {
+          "id": "q08",
+          "query": "QA tester with Selenium automation and manual testing experience.",
+          "recall@10": 0.833,
+          "returned": [
+            "Automata Selenium",
+            "Manual Testing (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "Selenium (New)",
+            "Automation Anywhere RPA Development (New)",
+            "ETL Testing (New)",
+            "Agile Testing (New)",
+            "Adobe Experience Manager (New)",
+            "UiPath RPA Development (New)",
+            "AngularJS (New)"
+          ],
+          "missed": [
+            "Load Runner (New)"
+          ]
+        },
+        {
+          "id": "q09",
+          "query": "Cashier for a bank branch who must handle money accurately.",
+          "recall@10": 0.8,
+          "returned": [
+            "Count Out The Money",
+            "Entry Level Cashier Solution",
+            "What Is The Value - US",
+            "Contact Center Call Simulation (New)",
+            "Conversational Multichat Simulation",
+            "Data Entry (New)",
+            "SHL Verify Interactive Numerical Calculation",
+            "Smart Interview Live",
+            "Verify - Technical Checking - Next Generation",
+            "Smart Interview On Demand"
+          ],
+          "missed": [
+            "Financial and Banking Services (New)"
+          ]
+        },
+        {
+          "id": "q10",
+          "query": "Administrative assistant: fast typing, data entry, and Word, Excel and Outlook.",
+          "recall@10": 0.7,
+          "returned": [
+            "Split Screen Typing Test - Form 1",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "MS Excel (New)",
+            "Microsoft Outlook 2013 (adaptive)",
+            "Typing (New)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "MS Office Basic Computer Literacy (New)",
+            "Data Entry Numeric Split Screen - US",
+            "MS Word (New)"
+          ],
+          "missed": [
+            "Data Entry (New)",
+            "Microsoft Word 365 - Essentials (New)",
+            "Workplace Administration Skills (New)"
+          ]
+        },
+        {
+          "id": "q11",
+          "query": "Senior executive hire. Assess leadership judgement and personality.",
+          "recall@10": 0.6,
+          "returned": [
+            "Executive Scenarios",
+            "Graduate Scenarios",
+            "Verify - Inductive Reasoning (2014)",
+            "Customer Service Phone Solution",
+            "Verify - Technical Checking - Next Generation",
+            "Multitasking Ability",
+            "Software Business Analysis",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Management Scenarios",
+            "WriteX - Email Writing (Sales) (New)"
+          ],
+          "missed": [
+            "Motivation Questionnaire MQM5",
+            "Verify - G+"
+          ]
+        },
+        {
+          "id": "q12",
+          "query": "Graduate trainee programme: general mental ability plus situational judgement.",
+          "recall@10": 0.429,
+          "returned": [
+            "Verify - General Ability Screen",
+            "SHL Verify Interactive G+",
+            "WriteX - Email Writing (Sales) (New)",
+            "Graduate Scenarios",
+            "Executive Scenarios",
+            "Management Scenarios",
+            "Retail Sales and Service Simulation",
+            "Customer Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "Verify - Verbal Ability - Next Generation"
+          ],
+          "missed": [
+            "Verify - Deductive Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Numerical Ability"
+          ]
+        },
+        {
+          "id": "q13",
+          "query": "Retail sales associates who talk to customers in store and over the phone, and write sales emails.",
+          "recall@10": 1.0,
+          "returned": [
+            "Retail Sales and Service Simulation",
+            "Sales & Service Phone Simulation",
+            "WriteX - Email Writing (Sales) (New)",
+            "Sales & Service Phone Solution",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Entry Level Sales Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "WriteX - Email Writing (Managerial) (New)",
+            "Customer Service Phone Simulation",
+            "SAP SD (Sales and Distribution) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q14",
+          "query": "Content writer and proofreader with excellent written English.",
+          "recall@10": 0.333,
+          "returned": [
+            "Written English v1",
+            "WriteX - Email Writing (Managerial) (New)",
+            "WriteX - Email Writing (Sales) (New)",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Written Spanish",
+            "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (US) (New)",
+            "SVAR - Spoken English (Indian Accent) (New)",
+            "English Comprehension (New)"
+          ],
+          "missed": [
+            "Business Communications",
+            "Proofreading v1",
+            "Reading Comprehension - English v1",
+            "Spelling (U.S.) (New)"
+          ]
+        },
+        {
+          "id": "q15",
+          "query": "Mechanical engineer for a manufacturing plant where safety awareness matters.",
+          "recall@10": 0.714,
+          "returned": [
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Mechanical Engineering (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Workplace Health and Safety (New)",
+            "Dependability and Safety Instrument (DSI)",
+            "Fire Engineering (New)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Manufacturing & Industrial - Vigilance Focus 8.0",
+            "Culinary Skills (New)"
+          ],
+          "missed": [
+            "Industrial Engineering (New)",
+            "Production Engineering (New)"
+          ]
+        },
+        {
+          "id": "q16",
+          "query": "SAP consultant for ABAP development and the sales and distribution module.",
+          "recall@10": 1.0,
+          "returned": [
+            "SAP SD (Sales and Distribution) (New)",
+            "SAP ABAP (Intermediate Level) (New)",
+            "SAP ABAP (Advanced Level) (New)",
+            "SAP Materials Management (New)",
+            "SAP HCM (Human Capital Management) (New)",
+            "Drupal (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "SAP Business Objects WebI (New)",
+            "SAP Basis (New)",
+            "SAP Hybris (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q17",
+          "query": "Big data engineer working with Spark, Hadoop, Kafka and Hive.",
+          "recall@10": 0.75,
+          "returned": [
+            "Apache Hadoop Extensions (New)",
+            "Apache Kafka (New)",
+            "Apache Spark (New)",
+            "Apache Hive (New)",
+            "Apache Hadoop (New)",
+            "Data Warehousing Concepts",
+            "Verify - Working with Information",
+            "RemoteWorkQ",
+            "Verify - G+",
+            "Data Entry (New)"
+          ],
+          "missed": [
+            "Apache HBase (New)",
+            "Apache Pig (New)"
+          ]
+        },
+        {
+          "id": "q18",
+          "query": "Registered nurse for a hospital ward.",
+          "recall@10": 0.0,
+          "returned": [],
+          "missed": [
+            "Cardiology and Diabetes Management (New)",
+            "General Diseases (New)",
+            "HIPAA (Security)",
+            "Medical Terminology (New)",
+            "Nursing (New)",
+            "Pediatrics (New)"
+          ]
+        },
+        {
+          "id": "q19",
+          "query": ".NET backend developer building web APIs in C#.",
+          "recall@10": 0.75,
+          "returned": [
+            "ASP .NET with C# (New)",
+            "ASP.NET 4.5",
+            "C# Programming (New)",
+            "MuleSoft Development (New)",
+            "Informatica (Developer) (New)",
+            "VB.NET (New)",
+            "ADO.NET (New)",
+            ".NET Framework 4.5",
+            ".NET WCF (New)",
+            ".NET WPF (New)"
+          ],
+          "missed": [
+            ".NET MVC (New)",
+            "RESTful Web Services (New)"
+          ]
+        },
+        {
+          "id": "q20",
+          "query": "Accountant handling accounts payable and receivable, with solid Excel skills.",
+          "recall@10": 0.875,
+          "returned": [
+            "Accounts Receivable (New)",
+            "Accounts Payable (New)",
+            "Accounts Receivable Simulation (New)",
+            "Accounts Payable Simulation (New)",
+            "MS Excel (New)",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "MS Office Basic Computer Literacy (New)",
+            "What Is The Value - US",
+            "Node.js (New)"
+          ],
+          "missed": [
+            "Financial Accounting (New)"
+          ]
+        },
+        {
+          "id": "q21",
+          "query": "Hotel front desk receptionist.",
+          "recall@10": 0.75,
+          "returned": [
+            "Entry Level Hotel Front Desk Solution",
+            "Front Office Management (New)",
+            "Automata Front End",
+            "JavaScript (New)",
+            "Housekeeping (New)",
+            "MS PowerPoint (New)",
+            "Written Spanish",
+            "Data Entry Ten Key Split Screen",
+            "Interviewing and Hiring Concepts (U.S.)",
+            "Following Instructions v1 - US (R2)"
+          ],
+          "missed": [
+            "Food and Beverage Services (New)"
+          ]
+        },
+        {
+          "id": "q22",
+          "query": "We hire people who will work fully remotely and need to manage their own time.",
+          "recall@10": 0.667,
+          "returned": [
+            "Project Management (2013)",
+            "Time Management (U.S.)",
+            "RemoteWorkQ",
+            "Cardiology and Diabetes Management (New)",
+            "Smart Interview Live",
+            "Split Screen Typing Test - Form 1",
+            "Multitasking Ability",
+            "Informatica (Developer) (New)",
+            "Informatica (Architecture) (New)",
+            "Executive Scenarios"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q23",
+          "query": "Digital marketing specialist for campaigns, SEO and social media.",
+          "recall@10": 1.0,
+          "returned": [
+            "Social Media (New)",
+            "Digital Advertising (New)",
+            "Search Engine Optimization (New)",
+            "Marketing (New)",
+            "Android Development (New)",
+            "Geoinformatics Engineering (New)",
+            "Training Development",
+            "Telecommunications Engineering (New)",
+            "Electronics and Semiconductor Engineering (New)",
+            "Electronics and Embedded Systems Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q24",
+          "query": "Robotic process automation developer.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automation Anywhere RPA Development (New)",
+            "Informatica (Developer) (New)",
+            "Automata Selenium",
+            "UiPath RPA Development (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "Verify Interactive Process Monitoring",
+            "Chemical Engineering (New)",
+            "ASP.NET 4.5",
+            "Microsoft SQL Server 2014 Programming",
+            "Verify - General Ability Screen"
+          ],
+          "missed": [
+            "Pega Development (New)"
+          ]
+        },
+        {
+          "id": "q25",
+          "query": "Production line operators who must be dependable and follow safety rules. Keep each test under 20 minutes.",
+          "recall@10": 0.833,
+          "returned": [
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Following Instructions v1 - US (R2)",
+            "Following Instructions v1 - UK (R1)",
+            "Verify - Following Instructions",
+            "Production Engineering (New)",
+            "Production and Industrial Engineering (New)",
+            "Workplace Health and Safety (New)",
+            "Dependability and Safety Instrument (DSI)",
+            "Petroleum Engineering (New)",
+            "Fire Engineering (New)"
+          ],
+          "missed": [
+            "Manufacturing & Industrial - Essential Focus 8.0"
+          ]
+        },
+        {
+          "id": "q26",
+          "query": "Project manager leading agile software teams.",
+          "recall@10": 0.6,
+          "returned": [
+            "Agile Software Development",
+            "Software Business Analysis",
+            "Agile Testing (New)",
+            "Project Management (2013)",
+            "Adobe Experience Manager (New)",
+            "Statistical Analysis System (New)",
+            "Manual Testing (New)",
+            "Search Engine Optimization (New)",
+            "Training Development",
+            "Maven (New)"
+          ],
+          "missed": [
+            "Management Scenarios",
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q27",
+          "query": "Spanish-speaking customer support agents for North America.",
+          "recall@10": 1.0,
+          "returned": [
+            "SVAR - Spoken Spanish (North American) (New)",
+            "Customer Service Phone Simulation",
+            "Written Spanish",
+            "Desktop Support (New)",
+            "Entry Level Customer Service (General) Solution",
+            "SVAR - Spoken Spanish (Castilian) (New)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Reading Comprehension - Spanish v1",
+            "Entry Level Technical Support Solution",
+            "Customer Service Phone Solution"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q28",
+          "query": "Mobile app developer for iOS and Android.",
+          "recall@10": 1.0,
+          "returned": [
+            "Android Development (New)",
+            "iOS Development (New)",
+            "ASP.NET 4.5",
+            "Informatica (Developer) (New)",
+            "Mobility (New)",
+            "Microsoft SQL Server 2014 Programming"
+          ],
+          "missed": []
+        }
+      ]
+    },
+    {
+      "stage": "dense",
+      "label": "Embedding search",
+      "recall@10": 0.704,
+      "map@10": 0.583,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "Hiring Java developers who can also collaborate effectively with business teams. Each assessment must fit in 40 minutes.",
+          "recall@10": 0.571,
+          "returned": [
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Assessment and Development Center Exercises",
+            "Java 8 (New)",
+            "Java Web Services (New)",
+            "Java Design Patterns (New)",
+            "Core Java (Entry Level) (New)",
+            "Virtual Assessment and Development Centers",
+            "Java Frameworks (New)",
+            "Software Business Analysis"
+          ],
+          "missed": [
+            "Core Java (Advanced Level) (New)",
+            "Interpersonal Communications",
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q02",
+          "query": "Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Max 60 minutes.",
+          "recall@10": 0.8,
+          "returned": [
+            "Python (New)",
+            "Smart Interview Live Coding",
+            "SQL (New)",
+            "Job Control Language (New)",
+            "JavaScript (New)",
+            "Entry Level Technical Support Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Microsoft SQL Server 2014 Programming",
+            "Automata - SQL (New)",
+            "Entry Level Cashier Solution"
+          ],
+          "missed": [
+            "SQL Server (New)"
+          ]
+        },
+        {
+          "id": "q03",
+          "query": "I am hiring an analyst and want to screen applicants with cognitive and personality tests within 45 minutes.",
+          "recall@10": 0.444,
+          "returned": [
+            "Verify - Deductive Reasoning",
+            "Multitasking Ability",
+            "Interviewing and Hiring Concepts (U.S.)",
+            "Verify - General Ability Screen",
+            "Verify - Numerical Ability",
+            "SHL Verify Interactive - Inductive Reasoning",
+            "Smart Interview Live",
+            "Verify - Technical Checking - Next Generation",
+            "Split Screen Typing Test - Form 1",
+            "SHL Verify Interactive \u2013 Numerical Reasoning"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r",
+            "SHL Verify Interactive G+",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Working with Information"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Entry-level call center agents. I need to check spoken English and how they handle customer calls.",
+          "recall@10": 0.556,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Entry Level Customer Service (General) Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Customer Service Phone Solution",
+            "Sales & Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "Contact Center Call Simulation (New)",
+            "Entry Level Technical Support Solution",
+            "Entry Level Sales Solution",
+            "Virtual Assessment and Development Centers"
+          ],
+          "missed": [
+            "Conversational Multichat Simulation",
+            "English Comprehension (New)",
+            "SVAR - Spoken English (Indian Accent)  (New)",
+            "SVAR - Spoken English (US)  (New)"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "Data scientist with strong statistics, machine learning and Python or R.",
+          "recall@10": 1.0,
+          "returned": [
+            "R Programming (New)",
+            "Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "Python (New)",
+            "Automata Data Science (New)",
+            "Statistical Analysis System (New)",
+            "IBM DataStage (New)",
+            "Econometrics (New)",
+            "Basic Statistics (New)",
+            "Geoinformatics Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q06",
+          "query": "Front-end developer: React, HTML/CSS and JavaScript. Under 30 minutes per test.",
+          "recall@10": 1.0,
+          "returned": [
+            "Automata Front End",
+            "ReactJS (New)",
+            "JavaScript (New)",
+            "HTML/CSS (New)",
+            "HTML5 (New)",
+            "CSS3 (New)",
+            "Node.js (New)",
+            "Drupal (New)",
+            "Amazon Web Services (AWS) Development (New)",
+            "Smart Interview Live Coding"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q07",
+          "query": "DevOps engineer comfortable with Docker, Kubernetes, Jenkins and Linux.",
+          "recall@10": 0.625,
+          "returned": [
+            "Kubernetes (New)",
+            "Docker (New)",
+            "Jenkins (New)",
+            "Linux Programming (General)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Agile Software Development",
+            "Linux Operating System",
+            "Microsoft Dynamics Development (New)",
+            "Linux Administration (New)",
+            "Siebel Development (New)"
+          ],
+          "missed": [
+            "Cloud Computing (New)",
+            "GIT (New)",
+            "Shell Scripting (New)"
+          ]
+        },
+        {
+          "id": "q08",
+          "query": "QA tester with Selenium automation and manual testing experience.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automata Selenium",
+            "Selenium (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Automata Front End",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Automation Anywhere RPA Development (New)",
+            "Java Web Services (New)",
+            "HTML5 (New)",
+            "Manual Testing (New)"
+          ],
+          "missed": [
+            "Agile Testing (New)",
+            "Load Runner (New)"
+          ]
+        },
+        {
+          "id": "q09",
+          "query": "Cashier for a bank branch who must handle money accurately.",
+          "recall@10": 0.8,
+          "returned": [
+            "Entry Level Cashier Solution",
+            "Count Out The Money",
+            "What Is The Value - US",
+            "Visual Comparison - US",
+            "Accounts Payable (New)",
+            "Financial and Banking Services (New)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Visual Comparison - UK",
+            "Accounts Payable Simulation (New)",
+            "Retail Sales and Service Simulation"
+          ],
+          "missed": [
+            "SHL Verify Interactive Numerical Calculation"
+          ]
+        },
+        {
+          "id": "q10",
+          "query": "Administrative assistant: fast typing, data entry, and Word, Excel and Outlook.",
+          "recall@10": 0.4,
+          "returned": [
+            "Workplace Administration Skills (New)",
+            "Microsoft Outlook 2013 (adaptive)",
+            "MS Office Basic Computer Literacy (Sim) (New)",
+            "Linux Administration (New)",
+            "Data Entry Numeric Split Screen - US",
+            "MS Office Basic Computer Literacy (New)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Typing (New)",
+            "Microsoft Windows Server 2012 Administration",
+            "Data Entry Ten Key Split Screen"
+          ],
+          "missed": [
+            "Data Entry (New)",
+            "MS Excel (New)",
+            "MS Word (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Microsoft Word 365 - Essentials (New)",
+            "Split Screen Typing Test - Form 1"
+          ]
+        },
+        {
+          "id": "q11",
+          "query": "Senior executive hire. Assess leadership judgement and personality.",
+          "recall@10": 0.8,
+          "returned": [
+            "Executive Scenarios",
+            "Front Office Management (New)",
+            "Interviewing and Hiring Concepts (U.S.)",
+            "Human Resources (New)",
+            "Workplace Administration Skills (New)",
+            "Motivation Questionnaire MQM5",
+            "Management Scenarios",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Manufac. & Indust. - Safety & Dependability 8.0"
+          ],
+          "missed": [
+            "Verify - G+"
+          ]
+        },
+        {
+          "id": "q12",
+          "query": "Graduate trainee programme: general mental ability plus situational judgement.",
+          "recall@10": 0.286,
+          "returned": [
+            "Graduate Scenarios",
+            "Verify - General Ability Screen",
+            "Management Scenarios",
+            "Training Development",
+            "Multitasking Ability",
+            "Executive Scenarios",
+            "Retail Sales and Service Simulation",
+            "Global Skills Assessment",
+            "Interviewing and Hiring Concepts (U.S.)",
+            "Visual Comparison - UK"
+          ],
+          "missed": [
+            "SHL Verify Interactive G+",
+            "Verify - Deductive Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Numerical Ability"
+          ]
+        },
+        {
+          "id": "q13",
+          "query": "Retail sales associates who talk to customers in store and over the phone, and write sales emails.",
+          "recall@10": 1.0,
+          "returned": [
+            "Sales & Service Phone Solution",
+            "Retail Sales and Service Simulation",
+            "Sales & Service Phone Simulation",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "WriteX - Email Writing (Sales) (New)",
+            "Customer Service Phone Solution",
+            "Customer Service Phone Simulation",
+            "Entry Level Sales Solution",
+            "Entry Level Customer Service (General) Solution",
+            "WriteX - Email Writing (Customer Service) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q14",
+          "query": "Content writer and proofreader with excellent written English.",
+          "recall@10": 0.5,
+          "returned": [
+            "Written English v1",
+            "WriteX - Email Writing (Managerial) (New)",
+            "WriteX - Email Writing (Sales) (New)",
+            "Proofreading v1",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Smart Interview Live Coding",
+            "Reading Comprehension - English v1",
+            "Reading Comprehension v2",
+            "Written Spanish",
+            "Virtual Assessment and Development Centers"
+          ],
+          "missed": [
+            "Business Communications",
+            "English Comprehension (New)",
+            "Spelling (U.S.) (New)"
+          ]
+        },
+        {
+          "id": "q15",
+          "query": "Mechanical engineer for a manufacturing plant where safety awareness matters.",
+          "recall@10": 0.857,
+          "returned": [
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Manufacturing & Industrial - Vigilance Focus 8.0",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Mechanical Engineering (New)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Industrial Engineering (New)",
+            "Workplace Health and Safety (New)",
+            "Production Engineering (New)",
+            "Production and Industrial Engineering (New)"
+          ],
+          "missed": [
+            "Dependability and Safety Instrument (DSI)"
+          ]
+        },
+        {
+          "id": "q16",
+          "query": "SAP consultant for ABAP development and the sales and distribution module.",
+          "recall@10": 1.0,
+          "returned": [
+            "SAP SD (Sales and Distribution) (New)",
+            "SAP ABAP (Intermediate Level) (New)",
+            "SAP ABAP (Advanced Level) (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "Entry Level Sales Solution",
+            "Sales & Service Phone Solution",
+            "SAP Materials Management (New)",
+            "Salesforce Development (New)",
+            "SAP Basis (New)",
+            "Sales & Service Phone Simulation"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q17",
+          "query": "Big data engineer working with Spark, Hadoop, Kafka and Hive.",
+          "recall@10": 0.75,
+          "returned": [
+            "Apache Hadoop Extensions (New)",
+            "Apache Spark (New)",
+            "Apache Hadoop (New)",
+            "Apache Hive (New)",
+            "Apache Kafka (New)",
+            "Data Warehousing Concepts",
+            "Kubernetes (New)",
+            "Teradata Development (New)",
+            "IBM DataStage (New)",
+            "Geoinformatics Engineering (New)"
+          ],
+          "missed": [
+            "Apache HBase (New)",
+            "Apache Pig (New)"
+          ]
+        },
+        {
+          "id": "q18",
+          "query": "Registered nurse for a hospital ward.",
+          "recall@10": 0.333,
+          "returned": [
+            "Nursing (New)",
+            "Customer Service Phone Simulation",
+            "Entry Level Hotel Front Desk Solution",
+            "Sales & Service Phone Simulation",
+            "HIPAA (Security)",
+            "Workplace Health and Safety (New)",
+            "Assessment and Development Center Exercises",
+            "Housekeeping (New)",
+            "Motivation Questionnaire MQM5",
+            "Occupational Personality Questionnaire OPQ32r"
+          ],
+          "missed": [
+            "Cardiology and Diabetes Management (New)",
+            "General Diseases (New)",
+            "Medical Terminology (New)",
+            "Pediatrics (New)"
+          ]
+        },
+        {
+          "id": "q19",
+          "query": ".NET backend developer building web APIs in C#.",
+          "recall@10": 0.75,
+          "returned": [
+            "ASP .NET with C# (New)",
+            "C# Programming (New)",
+            "ASP.NET 4.5",
+            ".NET Framework 4.5",
+            "SAP Business Objects WebI (New)",
+            "Automata Front End",
+            "Microsoft Dynamics Development (New)",
+            "RESTful Web Services (New)",
+            "HTML5 (New)",
+            ".NET WCF (New)"
+          ],
+          "missed": [
+            ".NET MVC (New)",
+            "ADO.NET (New)"
+          ]
+        },
+        {
+          "id": "q20",
+          "query": "Accountant handling accounts payable and receivable, with solid Excel skills.",
+          "recall@10": 1.0,
+          "returned": [
+            "Accounts Receivable (New)",
+            "Accounts Receivable Simulation (New)",
+            "Accounts Payable (New)",
+            "Financial Accounting (New)",
+            "Entry Level Cashier Solution",
+            "Accounts Payable Simulation (New)",
+            "MS Excel (New)",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Entry Level Sales Solution"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q21",
+          "query": "Hotel front desk receptionist.",
+          "recall@10": 0.5,
+          "returned": [
+            "Entry Level Hotel Front Desk Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Entry Level Customer Service (General) Solution",
+            "Customer Service Phone Simulation",
+            "Entry Level Cashier Solution",
+            "Front Office Management (New)",
+            "Business Communication (adaptive)",
+            "Customer Service Phone Solution",
+            "Conversational Multichat Simulation",
+            "Business Communications"
+          ],
+          "missed": [
+            "Food and Beverage Services (New)",
+            "Housekeeping (New)"
+          ]
+        },
+        {
+          "id": "q22",
+          "query": "We hire people who will work fully remotely and need to manage their own time.",
+          "recall@10": 0.667,
+          "returned": [
+            "RemoteWorkQ",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Entry Level Hotel Front Desk Solution",
+            "Smart Interview Live",
+            "Time Management (U.S.)",
+            "Smart Interview Live Coding",
+            "Entry Level Technical Support Solution",
+            "Entry Level Cashier Solution",
+            "Entry Level Customer Service (General) Solution",
+            "Assessment and Development Center Exercises"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q23",
+          "query": "Digital marketing specialist for campaigns, SEO and social media.",
+          "recall@10": 1.0,
+          "returned": [
+            "Marketing (New)",
+            "Digital Advertising (New)",
+            "Search Engine Optimization (New)",
+            "Social Media (New)",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Sales & Service Phone Simulation",
+            "Retail Sales and Service Simulation",
+            "Sales & Service Phone Solution",
+            "SAP SD (Sales and Distribution) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q24",
+          "query": "Robotic process automation developer.",
+          "recall@10": 0.333,
+          "returned": [
+            "Automation Anywhere RPA Development (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Automata Pro (New)",
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Automata (New)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Automata Selenium",
+            "Automata Data Science Pro (New)",
+            "Automata Front End",
+            "Manufac. & Indust. - Safety & Dependability 8.0"
+          ],
+          "missed": [
+            "Pega Development (New)",
+            "UiPath RPA Development (New)"
+          ]
+        },
+        {
+          "id": "q25",
+          "query": "Production line operators who must be dependable and follow safety rules. Keep each test under 20 minutes.",
+          "recall@10": 0.667,
+          "returned": [
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Verify - Following Instructions",
+            "Following Instructions v1 - US (R2)",
+            "Following Instructions v1 - UK (R1)",
+            "Verify Interactive Process Monitoring",
+            "Dependability and Safety Instrument (DSI)",
+            "Verify - Numerical Ability",
+            "Visual Comparison - US",
+            "Verify - Deductive Reasoning",
+            "Verify - Technical Checking - Next Generation"
+          ],
+          "missed": [
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Workplace Health and Safety (New)"
+          ]
+        },
+        {
+          "id": "q26",
+          "query": "Project manager leading agile software teams.",
+          "recall@10": 0.8,
+          "returned": [
+            "Agile Software Development",
+            "Project Management (2013)",
+            "Agile Testing (New)",
+            "Management Scenarios",
+            "Adobe Experience Manager (New)",
+            "SAP HCM (Human Capital Management) (New)",
+            "Software Business Analysis",
+            "Graduate Scenarios",
+            "Operations Management (New)",
+            "Executive Scenarios"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q27",
+          "query": "Spanish-speaking customer support agents for North America.",
+          "recall@10": 0.6,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Entry Level Customer Service (General) Solution",
+            "Sales & Service Phone Solution",
+            "Customer Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "SVAR - Spoken Spanish (North American) (New)",
+            "Entry Level Technical Support Solution",
+            "SVAR - Spoken Spanish (Castilian) (New)",
+            "Virtual Assessment and Development Centers"
+          ],
+          "missed": [
+            "Reading Comprehension - Spanish v1",
+            "Written Spanish"
+          ]
+        },
+        {
+          "id": "q28",
+          "query": "Mobile app developer for iOS and Android.",
+          "recall@10": 1.0,
+          "returned": [
+            "iOS Development (New)",
+            "Android Development (New)",
+            "Mobility (New)",
+            "UiPath RPA Development (New)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Salesforce Development (New)",
+            "Sales & Service Phone Solution",
+            "Agile Software Development",
+            "Smart Interview Live Coding",
+            "Automation Anywhere RPA Development (New)"
+          ],
+          "missed": []
+        }
+      ]
+    },
+    {
+      "stage": "hybrid",
+      "label": "Hybrid (RRF)",
+      "recall@10": 0.782,
+      "map@10": 0.692,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "Hiring Java developers who can also collaborate effectively with business teams. Each assessment must fit in 40 minutes.",
+          "recall@10": 0.714,
+          "returned": [
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Java 8 (New)",
+            "Java Design Patterns (New)",
+            "Java Web Services (New)",
+            "Java Frameworks (New)",
+            "Core Java (Entry Level) (New)",
+            "Core Java (Advanced Level) (New)",
+            "Software Business Analysis",
+            "Enterprise Java Beans (New)"
+          ],
+          "missed": [
+            "Interpersonal Communications",
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q02",
+          "query": "Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Max 60 minutes.",
+          "recall@10": 1.0,
+          "returned": [
+            "Python (New)",
+            "SQL (New)",
+            "JavaScript (New)",
+            "Automata - SQL (New)",
+            "Microsoft SQL Server 2014 Programming",
+            "SQL Server (New)",
+            "Oracle PL/SQL (New)",
+            "Automata Front End",
+            "Automata Selenium",
+            "Oracle DBA (Entry Level) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q03",
+          "query": "I am hiring an analyst and want to screen applicants with cognitive and personality tests within 45 minutes.",
+          "recall@10": 0.444,
+          "returned": [
+            "Verify - General Ability Screen",
+            "Multitasking Ability",
+            "Split Screen Typing Test - Form 1",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Verify - Numerical Ability",
+            "Verify - Technical Checking - Next Generation",
+            "Data Entry Numeric Split Screen - US",
+            "SHL Verify Interactive G+",
+            "Verify Interactive Process Monitoring",
+            "Verify - G+"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r",
+            "SHL Verify Interactive \u2013 Numerical Reasoning",
+            "Verify - Deductive Reasoning",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Working with Information"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Entry-level call center agents. I need to check spoken English and how they handle customer calls.",
+          "recall@10": 0.556,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Contact Center Call Simulation (New)",
+            "Customer Service Phone Solution",
+            "Entry Level Customer Service (General) Solution",
+            "SVAR - Spoken English (US) (New)",
+            "Sales & Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (AUS)"
+          ],
+          "missed": [
+            "Conversational Multichat Simulation",
+            "English Comprehension (New)",
+            "SVAR - Spoken English (Indian Accent)  (New)",
+            "SVAR - Spoken English (US)  (New)"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "Data scientist with strong statistics, machine learning and Python or R.",
+          "recall@10": 1.0,
+          "returned": [
+            "R Programming (New)",
+            "Data Science (New)",
+            "Automata Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "Python (New)",
+            "Basic Statistics (New)",
+            "Data Warehousing Concepts",
+            "SQL (New)",
+            "Statistical Analysis System (New)",
+            "Power System Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q06",
+          "query": "Front-end developer: React, HTML/CSS and JavaScript. Under 30 minutes per test.",
+          "recall@10": 1.0,
+          "returned": [
+            "Automata Front End",
+            "JavaScript (New)",
+            "HTML/CSS (New)",
+            "ReactJS (New)",
+            "ASP.NET 4.5",
+            "Informatica (Developer) (New)",
+            "Split Screen Typing Test - Form 1",
+            "HTML5 (New)",
+            "CSS3 (New)",
+            "Dependability and Safety Instrument (DSI)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q07",
+          "query": "DevOps engineer comfortable with Docker, Kubernetes, Jenkins and Linux.",
+          "recall@10": 0.625,
+          "returned": [
+            "Docker (New)",
+            "Kubernetes (New)",
+            "Jenkins (New)",
+            "Linux Programming (General)",
+            "Linux Operating System",
+            "Linux Administration (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Agile Software Development",
+            "Microsoft Dynamics Development (New)",
+            "Siebel Development (New)"
+          ],
+          "missed": [
+            "Cloud Computing (New)",
+            "GIT (New)",
+            "Shell Scripting (New)"
+          ]
+        },
+        {
+          "id": "q08",
+          "query": "QA tester with Selenium automation and manual testing experience.",
+          "recall@10": 0.833,
+          "returned": [
+            "Automata Selenium",
+            "Selenium (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "Manual Testing (New)",
+            "Automation Anywhere RPA Development (New)",
+            "Adobe Experience Manager (New)",
+            "Agile Testing (New)",
+            "ETL Testing (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Automata Front End"
+          ],
+          "missed": [
+            "Load Runner (New)"
+          ]
+        },
+        {
+          "id": "q09",
+          "query": "Cashier for a bank branch who must handle money accurately.",
+          "recall@10": 0.8,
+          "returned": [
+            "Count Out The Money",
+            "Entry Level Cashier Solution",
+            "What Is The Value - US",
+            "Verify - Technical Checking - Next Generation",
+            "SHL Verify Interactive Numerical Calculation",
+            "Customer Service Phone Simulation",
+            "Sales & Service Phone Simulation",
+            "Sales & Service Phone Solution",
+            "Contact Center Call Simulation (New)",
+            "Visual Comparison - US"
+          ],
+          "missed": [
+            "Financial and Banking Services (New)"
+          ]
+        },
+        {
+          "id": "q10",
+          "query": "Administrative assistant: fast typing, data entry, and Word, Excel and Outlook.",
+          "recall@10": 0.7,
+          "returned": [
+            "Microsoft Outlook 2013 (adaptive)",
+            "Workplace Administration Skills (New)",
+            "Data Entry Numeric Split Screen - US",
+            "Typing (New)",
+            "MS Office Basic Computer Literacy (New)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "MS Excel (New)",
+            "Split Screen Typing Test - Form 1",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Microsoft Excel 365 (New)"
+          ],
+          "missed": [
+            "Data Entry (New)",
+            "MS Word (New)",
+            "Microsoft Word 365 - Essentials (New)"
+          ]
+        },
+        {
+          "id": "q11",
+          "query": "Senior executive hire. Assess leadership judgement and personality.",
+          "recall@10": 0.8,
+          "returned": [
+            "Executive Scenarios",
+            "Management Scenarios",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Motivation Questionnaire MQM5",
+            "Multitasking Ability",
+            "Graduate Scenarios",
+            "Verify - Inductive Reasoning (2014)",
+            "Software Business Analysis",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor"
+          ],
+          "missed": [
+            "Verify - G+"
+          ]
+        },
+        {
+          "id": "q12",
+          "query": "Graduate trainee programme: general mental ability plus situational judgement.",
+          "recall@10": 0.714,
+          "returned": [
+            "Verify - General Ability Screen",
+            "Graduate Scenarios",
+            "Management Scenarios",
+            "Executive Scenarios",
+            "Retail Sales and Service Simulation",
+            "Interviewing and Hiring Concepts (U.S.)",
+            "Verify - Verbal Ability - Next Generation",
+            "Verify - Numerical Ability",
+            "Verify - Deductive Reasoning",
+            "Verify - G+"
+          ],
+          "missed": [
+            "SHL Verify Interactive G+",
+            "Verify - Inductive Reasoning (2014)"
+          ]
+        },
+        {
+          "id": "q13",
+          "query": "Retail sales associates who talk to customers in store and over the phone, and write sales emails.",
+          "recall@10": 1.0,
+          "returned": [
+            "Retail Sales and Service Simulation",
+            "Sales & Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "WriteX - Email Writing (Sales) (New)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Entry Level Sales Solution",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Customer Service Phone Simulation",
+            "Customer Service Phone Solution",
+            "WriteX - Email Writing (Managerial) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q14",
+          "query": "Content writer and proofreader with excellent written English.",
+          "recall@10": 0.5,
+          "returned": [
+            "Written English v1",
+            "WriteX - Email Writing (Managerial) (New)",
+            "WriteX - Email Writing (Sales) (New)",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Written Spanish",
+            "Reading Comprehension - English v1",
+            "Smart Interview Live Coding",
+            "English Comprehension (New)",
+            "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (U.K.)"
+          ],
+          "missed": [
+            "Business Communications",
+            "Proofreading v1",
+            "Spelling (U.S.) (New)"
+          ]
+        },
+        {
+          "id": "q15",
+          "query": "Mechanical engineer for a manufacturing plant where safety awareness matters.",
+          "recall@10": 0.714,
+          "returned": [
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Mechanical Engineering (New)",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Manufacturing & Industrial - Vigilance Focus 8.0",
+            "Workplace Health and Safety (New)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Fire Engineering (New)",
+            "Industrial Engineering (New)",
+            "Production and Industrial Engineering (New)"
+          ],
+          "missed": [
+            "Dependability and Safety Instrument (DSI)",
+            "Production Engineering (New)"
+          ]
+        },
+        {
+          "id": "q16",
+          "query": "SAP consultant for ABAP development and the sales and distribution module.",
+          "recall@10": 1.0,
+          "returned": [
+            "SAP SD (Sales and Distribution) (New)",
+            "SAP ABAP (Intermediate Level) (New)",
+            "SAP ABAP (Advanced Level) (New)",
+            "SAP Materials Management (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "SAP Basis (New)",
+            "Entry Level Sales Solution",
+            "SAP HCM (Human Capital Management) (New)",
+            "Sales & Service Phone Solution",
+            "SAP Business Objects WebI (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q17",
+          "query": "Big data engineer working with Spark, Hadoop, Kafka and Hive.",
+          "recall@10": 0.75,
+          "returned": [
+            "Apache Hadoop Extensions (New)",
+            "Apache Spark (New)",
+            "Apache Kafka (New)",
+            "Apache Hadoop (New)",
+            "Apache Hive (New)",
+            "Data Warehousing Concepts",
+            "Automata Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "Data Science (New)"
+          ],
+          "missed": [
+            "Apache HBase (New)",
+            "Apache Pig (New)"
+          ]
+        },
+        {
+          "id": "q18",
+          "query": "Registered nurse for a hospital ward.",
+          "recall@10": 0.333,
+          "returned": [
+            "Nursing (New)",
+            "Customer Service Phone Simulation",
+            "Entry Level Hotel Front Desk Solution",
+            "Sales & Service Phone Simulation",
+            "HIPAA (Security)",
+            "Workplace Health and Safety (New)",
+            "Assessment and Development Center Exercises",
+            "Housekeeping (New)",
+            "Motivation Questionnaire MQM5",
+            "Occupational Personality Questionnaire OPQ32r"
+          ],
+          "missed": [
+            "Cardiology and Diabetes Management (New)",
+            "General Diseases (New)",
+            "Medical Terminology (New)",
+            "Pediatrics (New)"
+          ]
+        },
+        {
+          "id": "q19",
+          "query": ".NET backend developer building web APIs in C#.",
+          "recall@10": 0.875,
+          "returned": [
+            "ASP .NET with C# (New)",
+            "ASP.NET 4.5",
+            "C# Programming (New)",
+            ".NET Framework 4.5",
+            ".NET WCF (New)",
+            "RESTful Web Services (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java Web Services (New)",
+            ".NET MVC (New)",
+            "Microsoft Dynamics Development (New)"
+          ],
+          "missed": [
+            "ADO.NET (New)"
+          ]
+        },
+        {
+          "id": "q20",
+          "query": "Accountant handling accounts payable and receivable, with solid Excel skills.",
+          "recall@10": 0.875,
+          "returned": [
+            "Accounts Receivable (New)",
+            "Accounts Payable (New)",
+            "Accounts Receivable Simulation (New)",
+            "Accounts Payable Simulation (New)",
+            "MS Excel (New)",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Count Out The Money",
+            "What Is The Value - US",
+            "Entry Level Cashier Solution"
+          ],
+          "missed": [
+            "Financial Accounting (New)"
+          ]
+        },
+        {
+          "id": "q21",
+          "query": "Hotel front desk receptionist.",
+          "recall@10": 0.75,
+          "returned": [
+            "Entry Level Hotel Front Desk Solution",
+            "Front Office Management (New)",
+            "Housekeeping (New)",
+            "Business Communication (adaptive)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Interpersonal Communications",
+            "Data Entry Numeric Split Screen - US",
+            "Time Management (U.S.)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Automata Front End"
+          ],
+          "missed": [
+            "Food and Beverage Services (New)"
+          ]
+        },
+        {
+          "id": "q22",
+          "query": "We hire people who will work fully remotely and need to manage their own time.",
+          "recall@10": 1.0,
+          "returned": [
+            "RemoteWorkQ",
+            "Time Management (U.S.)",
+            "Smart Interview Live",
+            "Multitasking Ability",
+            "Entry Level Hotel Front Desk Solution",
+            "Smart Interview Live Coding",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Virtual Assessment and Development Centers",
+            "Project Management (2013)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q23",
+          "query": "Digital marketing specialist for campaigns, SEO and social media.",
+          "recall@10": 1.0,
+          "returned": [
+            "Digital Advertising (New)",
+            "Social Media (New)",
+            "Marketing (New)",
+            "Search Engine Optimization (New)",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Geoinformatics Engineering (New)",
+            "Telecommunications Engineering (New)",
+            "Smart Interview Live",
+            "Android Development (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q24",
+          "query": "Robotic process automation developer.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automation Anywhere RPA Development (New)",
+            "Automata Selenium",
+            "Micro Focus Unified Functional Testing (New)",
+            "UiPath RPA Development (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Verify Interactive Process Monitoring",
+            "Chemical Engineering (New)",
+            "Microsoft Dynamics Development (New)",
+            "Metallurgical Engineering (New)",
+            "Manufacturing & Industrial - Vigilance Focus 8.0"
+          ],
+          "missed": [
+            "Pega Development (New)"
+          ]
+        },
+        {
+          "id": "q25",
+          "query": "Production line operators who must be dependable and follow safety rules. Keep each test under 20 minutes.",
+          "recall@10": 0.833,
+          "returned": [
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Following Instructions v1 - US (R2)",
+            "Verify - Following Instructions",
+            "Following Instructions v1 - UK (R1)",
+            "Dependability and Safety Instrument (DSI)",
+            "Verify Interactive Process Monitoring",
+            "Verify - Numerical Ability",
+            "Verify - Technical Checking - Next Generation",
+            "Production Engineering (New)",
+            "Workplace Health and Safety (New)"
+          ],
+          "missed": [
+            "Manufacturing & Industrial - Essential Focus 8.0"
+          ]
+        },
+        {
+          "id": "q26",
+          "query": "Project manager leading agile software teams.",
+          "recall@10": 0.8,
+          "returned": [
+            "Agile Software Development",
+            "Project Management (2013)",
+            "Agile Testing (New)",
+            "Software Business Analysis",
+            "Adobe Experience Manager (New)",
+            "Management Scenarios",
+            "Executive Scenarios",
+            "Entry Level Technical Support Solution",
+            "Maven (New)",
+            "Motivation Questionnaire MQM5"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q27",
+          "query": "Spanish-speaking customer support agents for North America.",
+          "recall@10": 0.6,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "SVAR - Spoken Spanish (North American) (New)",
+            "Entry Level Customer Service (General) Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Customer Service Phone Solution",
+            "SVAR - Spoken Spanish (Castilian) (New)",
+            "Entry Level Technical Support Solution",
+            "Sales & Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "Virtual Assessment and Development Centers"
+          ],
+          "missed": [
+            "Reading Comprehension - Spanish v1",
+            "Written Spanish"
+          ]
+        },
+        {
+          "id": "q28",
+          "query": "Mobile app developer for iOS and Android.",
+          "recall@10": 1.0,
+          "returned": [
+            "Android Development (New)",
+            "iOS Development (New)",
+            "Mobility (New)",
+            "Informatica (Developer) (New)",
+            "ASP.NET 4.5",
+            "UiPath RPA Development (New)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Microsoft SQL Server 2014 Programming",
+            "Salesforce Development (New)",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": []
+        }
+      ]
+    },
+    {
+      "stage": "hybrid_multi",
+      "label": "+ one search per skill",
+      "recall@10": 0.756,
+      "map@10": 0.647,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "Hiring Java developers who can also collaborate effectively with business teams. Each assessment must fit in 40 minutes.",
+          "recall@10": 0.571,
+          "returned": [
+            "Business Communications",
+            "Business Communication (adaptive)",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Virtual Assessment and Development Centers",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Interpersonal Communications",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Java 8 (New)",
+            "Java Design Patterns (New)",
+            "Java Web Services (New)"
+          ],
+          "missed": [
+            "Core Java (Advanced Level) (New)",
+            "Core Java (Entry Level) (New)",
+            "Java Frameworks (New)"
+          ]
+        },
+        {
+          "id": "q02",
+          "query": "Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Max 60 minutes.",
+          "recall@10": 1.0,
+          "returned": [
+            "Python (New)",
+            "SQL (New)",
+            "JavaScript (New)",
+            "Automata - SQL (New)",
+            "SQL Server (New)",
+            "Microsoft SQL Server 2014 Programming",
+            "Automata Front End",
+            "Oracle PL/SQL (New)",
+            "SQL Server Integration Services (SSIS) (New)",
+            "SQL Server Reporting Services (SSRS) (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q03",
+          "query": "I am hiring an analyst and want to screen applicants with cognitive and personality tests within 45 minutes.",
+          "recall@10": 0.333,
+          "returned": [
+            "AI Skills",
+            "Multitasking Ability",
+            "Verify - Numerical Ability",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Motivation Questionnaire MQM5",
+            "Dependability and Safety Instrument (DSI)",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Entry Level Cashier Solution",
+            "Verify - General Ability Screen"
+          ],
+          "missed": [
+            "SHL Verify Interactive G+",
+            "SHL Verify Interactive \u2013 Numerical Reasoning",
+            "Verify - Deductive Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Working with Information"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Entry-level call center agents. I need to check spoken English and how they handle customer calls.",
+          "recall@10": 0.333,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Contact Center Call Simulation (New)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "SVAR - Spoken English (US) (New)",
+            "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (Indian Accent) (New)",
+            "Virtual Assessment and Development Centers",
+            "Smart Interview Live",
+            "Entry Level Technical Support Solution"
+          ],
+          "missed": [
+            "Conversational Multichat Simulation",
+            "Customer Service Phone Solution",
+            "English Comprehension (New)",
+            "Entry Level Customer Service (General) Solution",
+            "SVAR - Spoken English (Indian Accent)  (New)",
+            "SVAR - Spoken English (US)  (New)"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "Data scientist with strong statistics, machine learning and Python or R.",
+          "recall@10": 1.0,
+          "returned": [
+            "R Programming (New)",
+            "Data Science (New)",
+            "Automata Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "Python (New)",
+            "Basic Statistics (New)",
+            "Data Warehousing Concepts",
+            "SQL (New)",
+            "Statistical Analysis System (New)",
+            "Power System Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q06",
+          "query": "Front-end developer: React, HTML/CSS and JavaScript. Under 30 minutes per test.",
+          "recall@10": 1.0,
+          "returned": [
+            "Automata Front End",
+            "JavaScript (New)",
+            "HTML/CSS (New)",
+            "ReactJS (New)",
+            "ASP.NET 4.5",
+            "Informatica (Developer) (New)",
+            "Split Screen Typing Test - Form 1",
+            "HTML5 (New)",
+            "CSS3 (New)",
+            "Dependability and Safety Instrument (DSI)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q07",
+          "query": "DevOps engineer comfortable with Docker, Kubernetes, Jenkins and Linux.",
+          "recall@10": 0.625,
+          "returned": [
+            "Docker (New)",
+            "Kubernetes (New)",
+            "Jenkins (New)",
+            "Linux Programming (General)",
+            "Linux Operating System",
+            "Linux Administration (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Agile Software Development",
+            "Microsoft Dynamics Development (New)",
+            "Siebel Development (New)"
+          ],
+          "missed": [
+            "Cloud Computing (New)",
+            "GIT (New)",
+            "Shell Scripting (New)"
+          ]
+        },
+        {
+          "id": "q08",
+          "query": "QA tester with Selenium automation and manual testing experience.",
+          "recall@10": 0.833,
+          "returned": [
+            "Automata Selenium",
+            "Manual Testing (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "Selenium (New)",
+            "Automation Anywhere RPA Development (New)",
+            "Agile Testing (New)",
+            "ETL Testing (New)",
+            "UiPath RPA Development (New)",
+            "AngularJS (New)",
+            "Jenkins (New)"
+          ],
+          "missed": [
+            "Load Runner (New)"
+          ]
+        },
+        {
+          "id": "q09",
+          "query": "Cashier for a bank branch who must handle money accurately.",
+          "recall@10": 0.8,
+          "returned": [
+            "Count Out The Money",
+            "Entry Level Cashier Solution",
+            "What Is The Value - US",
+            "Verify - Technical Checking - Next Generation",
+            "SHL Verify Interactive Numerical Calculation",
+            "Customer Service Phone Simulation",
+            "Sales & Service Phone Simulation",
+            "Sales & Service Phone Solution",
+            "Contact Center Call Simulation (New)",
+            "Visual Comparison - US"
+          ],
+          "missed": [
+            "Financial and Banking Services (New)"
+          ]
+        },
+        {
+          "id": "q10",
+          "query": "Administrative assistant: fast typing, data entry, and Word, Excel and Outlook.",
+          "recall@10": 0.7,
+          "returned": [
+            "MS Office Basic Computer Literacy (New)",
+            "Split Screen Typing Test - Form 1",
+            "Microsoft Outlook 2013 (adaptive)",
+            "Typing (New)",
+            "Data Entry Numeric Split Screen - US",
+            "Data Entry Alphanumeric Split Screen - US",
+            "MS Excel (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Microsoft Excel 365 (New)",
+            "MS Word (New)"
+          ],
+          "missed": [
+            "Data Entry (New)",
+            "Microsoft Word 365 - Essentials (New)",
+            "Workplace Administration Skills (New)"
+          ]
+        },
+        {
+          "id": "q11",
+          "query": "Senior executive hire. Assess leadership judgement and personality.",
+          "recall@10": 0.6,
+          "returned": [
+            "Occupational Personality Questionnaire OPQ32r",
+            "Motivation Questionnaire MQM5",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Executive Scenarios",
+            "360\u00b0 Multi-Rater Feedback System (MFS)",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Multitasking Ability",
+            "AI Skills",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": [
+            "Management Scenarios",
+            "Verify - G+"
+          ]
+        },
+        {
+          "id": "q12",
+          "query": "Graduate trainee programme: general mental ability plus situational judgement.",
+          "recall@10": 0.857,
+          "returned": [
+            "Verify - Deductive Reasoning",
+            "SHL Verify Interactive G+",
+            "Verify - G+",
+            "Graduate Scenarios",
+            "SHL Verify Interactive - Inductive Reasoning",
+            "Verify - General Ability Screen",
+            "Multitasking Ability",
+            "Verify - Verbal Ability - Next Generation",
+            "Verify - Numerical Ability",
+            "Retail Sales and Service Simulation"
+          ],
+          "missed": [
+            "Verify - Inductive Reasoning (2014)"
+          ]
+        },
+        {
+          "id": "q13",
+          "query": "Retail sales associates who talk to customers in store and over the phone, and write sales emails.",
+          "recall@10": 1.0,
+          "returned": [
+            "Retail Sales and Service Simulation",
+            "WriteX - Email Writing (Sales) (New)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "WriteX - Email Writing (Managerial) (New)",
+            "Entry Level Cashier Solution",
+            "Multitasking Ability",
+            "Sales & Service Phone Solution",
+            "Sales & Service Phone Simulation",
+            "Entry Level Sales Solution"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q14",
+          "query": "Content writer and proofreader with excellent written English.",
+          "recall@10": 0.5,
+          "returned": [
+            "Written English v1",
+            "Virtual Assessment and Development Centers",
+            "Written Spanish",
+            "WriteX - Email Writing (Managerial) (New)",
+            "SVAR - Spoken English (AUS)",
+            "WriteX - Email Writing (Sales) (New)",
+            "Reading Comprehension - English v1",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "SVAR - Spoken English (U.K.)",
+            "English Comprehension (New)"
+          ],
+          "missed": [
+            "Business Communications",
+            "Proofreading v1",
+            "Spelling (U.S.) (New)"
+          ]
+        },
+        {
+          "id": "q15",
+          "query": "Mechanical engineer for a manufacturing plant where safety awareness matters.",
+          "recall@10": 0.857,
+          "returned": [
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Mechanical Engineering (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Manufacturing & Industrial - Vigilance Focus 8.0",
+            "Workplace Health and Safety (New)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Fire Engineering (New)",
+            "Industrial Engineering (New)",
+            "Dependability and Safety Instrument (DSI)"
+          ],
+          "missed": [
+            "Production Engineering (New)"
+          ]
+        },
+        {
+          "id": "q16",
+          "query": "SAP consultant for ABAP development and the sales and distribution module.",
+          "recall@10": 1.0,
+          "returned": [
+            "SAP SD (Sales and Distribution) (New)",
+            "SAP ABAP (Intermediate Level) (New)",
+            "SAP ABAP (Advanced Level) (New)",
+            "Basic Statistics (New)",
+            "SAP Materials Management (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "SAP Basis (New)",
+            "Entry Level Sales Solution",
+            "SAP HCM (Human Capital Management) (New)",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q17",
+          "query": "Big data engineer working with Spark, Hadoop, Kafka and Hive.",
+          "recall@10": 0.75,
+          "returned": [
+            "Apache Hadoop Extensions (New)",
+            "Apache Spark (New)",
+            "Apache Kafka (New)",
+            "Apache Hadoop (New)",
+            "Apache Hive (New)",
+            "Data Warehousing Concepts",
+            "Automata Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "Data Science (New)"
+          ],
+          "missed": [
+            "Apache HBase (New)",
+            "Apache Pig (New)"
+          ]
+        },
+        {
+          "id": "q18",
+          "query": "Registered nurse for a hospital ward.",
+          "recall@10": 0.333,
+          "returned": [
+            "Nursing (New)",
+            "Customer Service Phone Simulation",
+            "Entry Level Hotel Front Desk Solution",
+            "Sales & Service Phone Simulation",
+            "HIPAA (Security)",
+            "Workplace Health and Safety (New)",
+            "Assessment and Development Center Exercises",
+            "Housekeeping (New)",
+            "Motivation Questionnaire MQM5",
+            "Occupational Personality Questionnaire OPQ32r"
+          ],
+          "missed": [
+            "Cardiology and Diabetes Management (New)",
+            "General Diseases (New)",
+            "Medical Terminology (New)",
+            "Pediatrics (New)"
+          ]
+        },
+        {
+          "id": "q19",
+          "query": ".NET backend developer building web APIs in C#.",
+          "recall@10": 0.875,
+          "returned": [
+            "ASP .NET with C# (New)",
+            "C# Programming (New)",
+            "ASP.NET 4.5",
+            ".NET Framework 4.5",
+            ".NET WCF (New)",
+            "RESTful Web Services (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java Web Services (New)",
+            ".NET MVC (New)",
+            "Microsoft Dynamics Development (New)"
+          ],
+          "missed": [
+            "ADO.NET (New)"
+          ]
+        },
+        {
+          "id": "q20",
+          "query": "Accountant handling accounts payable and receivable, with solid Excel skills.",
+          "recall@10": 0.875,
+          "returned": [
+            "Accounts Receivable (New)",
+            "Accounts Payable (New)",
+            "Accounts Receivable Simulation (New)",
+            "Accounts Payable Simulation (New)",
+            "MS Excel (New)",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "MS Office Basic Computer Literacy (New)",
+            "Customer Service Phone Simulation",
+            "SAP Materials Management (New)"
+          ],
+          "missed": [
+            "Financial Accounting (New)"
+          ]
+        },
+        {
+          "id": "q21",
+          "query": "Hotel front desk receptionist.",
+          "recall@10": 0.75,
+          "returned": [
+            "Entry Level Hotel Front Desk Solution",
+            "Front Office Management (New)",
+            "Housekeeping (New)",
+            "Business Communication (adaptive)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Interpersonal Communications",
+            "Data Entry Numeric Split Screen - US",
+            "Time Management (U.S.)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Automata Front End"
+          ],
+          "missed": [
+            "Food and Beverage Services (New)"
+          ]
+        },
+        {
+          "id": "q22",
+          "query": "We hire people who will work fully remotely and need to manage their own time.",
+          "recall@10": 1.0,
+          "returned": [
+            "RemoteWorkQ",
+            "Time Management (U.S.)",
+            "Smart Interview Live",
+            "Multitasking Ability",
+            "Entry Level Hotel Front Desk Solution",
+            "Smart Interview Live Coding",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Virtual Assessment and Development Centers",
+            "Project Management (2013)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q23",
+          "query": "Digital marketing specialist for campaigns, SEO and social media.",
+          "recall@10": 1.0,
+          "returned": [
+            "Social Media (New)",
+            "Digital Advertising (New)",
+            "Marketing (New)",
+            "Android Development (New)",
+            "Training Development",
+            "Search Engine Optimization (New)",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Geoinformatics Engineering (New)",
+            "Telecommunications Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q24",
+          "query": "Robotic process automation developer.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automation Anywhere RPA Development (New)",
+            "Automata Selenium",
+            "Micro Focus Unified Functional Testing (New)",
+            "UiPath RPA Development (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Verify Interactive Process Monitoring",
+            "Chemical Engineering (New)",
+            "Microsoft Dynamics Development (New)",
+            "Metallurgical Engineering (New)",
+            "Manufacturing & Industrial - Vigilance Focus 8.0"
+          ],
+          "missed": [
+            "Pega Development (New)"
+          ]
+        },
+        {
+          "id": "q25",
+          "query": "Production line operators who must be dependable and follow safety rules. Keep each test under 20 minutes.",
+          "recall@10": 0.5,
+          "returned": [
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Dependability and Safety Instrument (DSI)",
+            "Verify Interactive Process Monitoring",
+            "Production Engineering (New)",
+            "Workplace Health and Safety (New)",
+            "Production and Industrial Engineering (New)",
+            "Petroleum Engineering (New)",
+            "Fire Engineering (New)",
+            "Ceramic Engineering (New)",
+            "Culinary Skills (New)"
+          ],
+          "missed": [
+            "Following Instructions v1 - US (R2)",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Verify - Following Instructions"
+          ]
+        },
+        {
+          "id": "q26",
+          "query": "Project manager leading agile software teams.",
+          "recall@10": 0.8,
+          "returned": [
+            "Agile Software Development",
+            "Agile Testing (New)",
+            "Project Management (2013)",
+            "Software Business Analysis",
+            "Adobe Experience Manager (New)",
+            "Management Scenarios",
+            "Executive Scenarios",
+            "Entry Level Technical Support Solution",
+            "Maven (New)",
+            "Motivation Questionnaire MQM5"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q27",
+          "query": "Spanish-speaking customer support agents for North America.",
+          "recall@10": 0.6,
+          "returned": [
+            "SVAR - Spoken Spanish (North American) (New)",
+            "Virtual Assessment and Development Centers",
+            "SVAR - Spoken Spanish (Castilian) (New)",
+            "Entry Level Technical Support Solution",
+            "Written Spanish",
+            "Desktop Support (New)",
+            "Smart Interview On Demand",
+            "Smart Interview Live",
+            "Smart Interview Live Coding",
+            "Reading Comprehension - Spanish v1"
+          ],
+          "missed": [
+            "Customer Service Phone Simulation",
+            "Entry Level Customer Service (General) Solution"
+          ]
+        },
+        {
+          "id": "q28",
+          "query": "Mobile app developer for iOS and Android.",
+          "recall@10": 1.0,
+          "returned": [
+            "Android Development (New)",
+            "iOS Development (New)",
+            "Mobility (New)",
+            "Informatica (Developer) (New)",
+            "ASP.NET 4.5",
+            "UiPath RPA Development (New)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Microsoft SQL Server 2014 Programming",
+            "Salesforce Development (New)",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": []
+        }
+      ]
+    },
+    {
+      "stage": "hybrid_multi_balanced",
+      "label": "+ balanced selection",
+      "recall@10": 0.756,
+      "map@10": 0.661,
+      "queries": [
+        {
+          "id": "q01",
+          "query": "Hiring Java developers who can also collaborate effectively with business teams. Each assessment must fit in 40 minutes.",
+          "recall@10": 0.571,
+          "returned": [
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Interpersonal Communications",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Business Communications",
+            "Java 8 (New)",
+            "Business Communication (adaptive)",
+            "Java Design Patterns (New)",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Java Web Services (New)",
+            "Sales Transformation 2.0 - Individual Contributor"
+          ],
+          "missed": [
+            "Core Java (Advanced Level) (New)",
+            "Core Java (Entry Level) (New)",
+            "Java Frameworks (New)"
+          ]
+        },
+        {
+          "id": "q02",
+          "query": "Looking to hire mid-level professionals proficient in Python, SQL and JavaScript. Max 60 minutes.",
+          "recall@10": 1.0,
+          "returned": [
+            "Python (New)",
+            "SQL Server (New)",
+            "JavaScript (New)",
+            "SQL (New)",
+            "Automata Front End",
+            "Automata - SQL (New)",
+            "Microsoft SQL Server 2014 Programming",
+            "SQL Server Integration Services (SSIS) (New)",
+            "SQL Server Reporting Services (SSRS) (New)",
+            "Oracle PL/SQL (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q03",
+          "query": "I am hiring an analyst and want to screen applicants with cognitive and personality tests within 45 minutes.",
+          "recall@10": 0.333,
+          "returned": [
+            "Verify - General Ability Screen",
+            "Occupational Personality Questionnaire OPQ32r",
+            "SHL Verify Interactive - Inductive Reasoning",
+            "Multitasking Ability",
+            "AI Skills",
+            "SHL Verify Interactive \u2013 Deductive Reasoning",
+            "Motivation Questionnaire MQM5",
+            "Split Screen Typing Test - Form 1",
+            "Dependability and Safety Instrument (DSI)",
+            "Verify - Deductive Reasoning"
+          ],
+          "missed": [
+            "SHL Verify Interactive G+",
+            "SHL Verify Interactive \u2013 Numerical Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Numerical Ability",
+            "Verify - Working with Information"
+          ]
+        },
+        {
+          "id": "q04",
+          "query": "Entry-level call center agents. I need to check spoken English and how they handle customer calls.",
+          "recall@10": 0.444,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Contact Center Call Simulation (New)",
+            "SVAR - Spoken English (AUS)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Customer Service Phone Solution",
+            "SVAR - Spoken English (U.K.)",
+            "Smart Interview Live",
+            "Virtual Assessment and Development Centers",
+            "SVAR - Spoken English (US) (New)",
+            "SVAR - Spoken English (Indian Accent) (New)"
+          ],
+          "missed": [
+            "Conversational Multichat Simulation",
+            "English Comprehension (New)",
+            "Entry Level Customer Service (General) Solution",
+            "SVAR - Spoken English (Indian Accent)  (New)",
+            "SVAR - Spoken English (US)  (New)"
+          ]
+        },
+        {
+          "id": "q05",
+          "query": "Data scientist with strong statistics, machine learning and Python or R.",
+          "recall@10": 0.857,
+          "returned": [
+            "R Programming (New)",
+            "Basic Statistics (New)",
+            "Automata Data Science (New)",
+            "Python (New)",
+            "Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "Customer Service Phone Solution",
+            "Sales & Service Phone Solution",
+            "Data Warehousing Concepts",
+            "SQL (New)"
+          ],
+          "missed": [
+            "Statistical Analysis System (New)"
+          ]
+        },
+        {
+          "id": "q06",
+          "query": "Front-end developer: React, HTML/CSS and JavaScript. Under 30 minutes per test.",
+          "recall@10": 1.0,
+          "returned": [
+            "Automata Front End",
+            "HTML/CSS (New)",
+            "JavaScript (New)",
+            "ReactJS (New)",
+            "ASP.NET 4.5",
+            "Informatica (Developer) (New)",
+            "Split Screen Typing Test - Form 1",
+            "HTML5 (New)",
+            "CSS3 (New)",
+            "Dependability and Safety Instrument (DSI)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q07",
+          "query": "DevOps engineer comfortable with Docker, Kubernetes, Jenkins and Linux.",
+          "recall@10": 0.625,
+          "returned": [
+            "Docker (New)",
+            "Kubernetes (New)",
+            "Jenkins (New)",
+            "Linux Programming (General)",
+            "Linux Administration (New)",
+            "Linux Operating System",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Agile Software Development",
+            "Microsoft Dynamics Development (New)",
+            "Siebel Development (New)"
+          ],
+          "missed": [
+            "Cloud Computing (New)",
+            "GIT (New)",
+            "Shell Scripting (New)"
+          ]
+        },
+        {
+          "id": "q08",
+          "query": "QA tester with Selenium automation and manual testing experience.",
+          "recall@10": 0.833,
+          "returned": [
+            "Automata Selenium",
+            "Selenium (New)",
+            "Automation Anywhere RPA Development (New)",
+            "Manual Testing (New)",
+            "ETL Testing (New)",
+            "Micro Focus Unified Functional Testing (New)",
+            "UiPath RPA Development (New)",
+            "Agile Testing (New)",
+            "Jenkins (New)",
+            "Adobe Experience Manager (New)"
+          ],
+          "missed": [
+            "Load Runner (New)"
+          ]
+        },
+        {
+          "id": "q09",
+          "query": "Cashier for a bank branch who must handle money accurately.",
+          "recall@10": 0.8,
+          "returned": [
+            "Count Out The Money",
+            "Entry Level Cashier Solution",
+            "What Is The Value - US",
+            "Verify - Technical Checking - Next Generation",
+            "SHL Verify Interactive Numerical Calculation",
+            "Customer Service Phone Simulation",
+            "Sales & Service Phone Simulation",
+            "Sales & Service Phone Solution",
+            "Contact Center Call Simulation (New)",
+            "Visual Comparison - US"
+          ],
+          "missed": [
+            "Financial and Banking Services (New)"
+          ]
+        },
+        {
+          "id": "q10",
+          "query": "Administrative assistant: fast typing, data entry, and Word, Excel and Outlook.",
+          "recall@10": 0.6,
+          "returned": [
+            "Microsoft Outlook 2013 (adaptive)",
+            "Typing (New)",
+            "MS Word (New)",
+            "MS Excel (New)",
+            "Workplace Administration Skills (New)",
+            "Split Screen Typing Test - Form 1",
+            "Microsoft Word 365 (New)",
+            "Microsoft Excel 365 (New)",
+            "Data Entry Numeric Split Screen - US",
+            "Contact Center Call Simulation (New)"
+          ],
+          "missed": [
+            "Data Entry (New)",
+            "MS Office Basic Computer Literacy (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "Microsoft Word 365 - Essentials (New)"
+          ]
+        },
+        {
+          "id": "q11",
+          "query": "Senior executive hire. Assess leadership judgement and personality.",
+          "recall@10": 0.8,
+          "returned": [
+            "Executive Scenarios",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Interpersonal Communications",
+            "Management Scenarios",
+            "Motivation Questionnaire MQM5",
+            "AI Skills",
+            "Business Communications",
+            "Assessment and Development Center Exercises",
+            "Dependability and Safety Instrument (DSI)",
+            "Business Communication (adaptive)"
+          ],
+          "missed": [
+            "Verify - G+"
+          ]
+        },
+        {
+          "id": "q12",
+          "query": "Graduate trainee programme: general mental ability plus situational judgement.",
+          "recall@10": 0.429,
+          "returned": [
+            "Verify - General Ability Screen",
+            "Graduate Scenarios",
+            "SHL Verify Interactive G+",
+            "SHL Verify Interactive - Inductive Reasoning",
+            "Economics (New)",
+            "Verify - Verbal Ability - Next Generation",
+            "SHL Verify Interactive \u2013 Deductive Reasoning",
+            "Executive Scenarios",
+            "Management Scenarios",
+            "Basic Biology (New)"
+          ],
+          "missed": [
+            "Verify - Deductive Reasoning",
+            "Verify - G+",
+            "Verify - Inductive Reasoning (2014)",
+            "Verify - Numerical Ability"
+          ]
+        },
+        {
+          "id": "q13",
+          "query": "Retail sales associates who talk to customers in store and over the phone, and write sales emails.",
+          "recall@10": 0.8,
+          "returned": [
+            "Retail Sales and Service Simulation",
+            "WriteX - Email Writing (Managerial) (New)",
+            "Sales & Service Phone Solution",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Sales & Service Phone Simulation",
+            "Entry Level Cashier Solution",
+            "WriteX - Email Writing (Sales) (New)",
+            "Multitasking Ability",
+            "MS Office Basic Computer Literacy (Sim) (New)"
+          ],
+          "missed": [
+            "Entry Level Sales Solution"
+          ]
+        },
+        {
+          "id": "q14",
+          "query": "Content writer and proofreader with excellent written English.",
+          "recall@10": 0.333,
+          "returned": [
+            "Written English v1",
+            "SVAR - Spoken English (AUS)",
+            "WriteX - Email Writing (Managerial) (New)",
+            "Written Spanish",
+            "SVAR - Spoken English (U.K.)",
+            "WriteX - Email Writing (Sales) (New)",
+            "Business Communications",
+            "SVAR - Spoken English (US) (New)",
+            "WriteX - Email Writing (Customer Service) (New)",
+            "Business Communication (adaptive)"
+          ],
+          "missed": [
+            "English Comprehension (New)",
+            "Proofreading v1",
+            "Reading Comprehension - English v1",
+            "Spelling (U.S.) (New)"
+          ]
+        },
+        {
+          "id": "q15",
+          "query": "Mechanical engineer for a manufacturing plant where safety awareness matters.",
+          "recall@10": 0.857,
+          "returned": [
+            "Manufacturing & Industrial - Mechanical Focus 8.0",
+            "Mechanical Engineering (New)",
+            "Workplace Health and Safety (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Manufacturing & Industrial - Essential Focus 8.0",
+            "Dependability and Safety Instrument (DSI)",
+            "Manufacturing & Industrial - Vigilance Focus 8.0",
+            "Fire Engineering (New)",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Industrial Engineering (New)"
+          ],
+          "missed": [
+            "Production Engineering (New)"
+          ]
+        },
+        {
+          "id": "q16",
+          "query": "SAP consultant for ABAP development and the sales and distribution module.",
+          "recall@10": 1.0,
+          "returned": [
+            "SAP SD (Sales and Distribution) (New)",
+            "SAP ABAP (Intermediate Level) (New)",
+            "SAP ABAP (Advanced Level) (New)",
+            "Basic Statistics (New)",
+            "SAP Materials Management (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "SAP Basis (New)",
+            "Entry Level Sales Solution",
+            "SAP HCM (Human Capital Management) (New)",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q17",
+          "query": "Big data engineer working with Spark, Hadoop, Kafka and Hive.",
+          "recall@10": 0.75,
+          "returned": [
+            "Apache Hadoop Extensions (New)",
+            "Apache Spark (New)",
+            "Apache Hadoop (New)",
+            "Apache Kafka (New)",
+            "Apache Hive (New)",
+            "Data Warehousing Concepts",
+            "Automata Data Science (New)",
+            "Automata Data Science Pro (New)",
+            "SAP BW (Business Warehouse) (New)",
+            "Data Science (New)"
+          ],
+          "missed": [
+            "Apache HBase (New)",
+            "Apache Pig (New)"
+          ]
+        },
+        {
+          "id": "q18",
+          "query": "Registered nurse for a hospital ward.",
+          "recall@10": 0.333,
+          "returned": [
+            "Nursing (New)",
+            "Customer Service Phone Simulation",
+            "Entry Level Hotel Front Desk Solution",
+            "Sales & Service Phone Simulation",
+            "HIPAA (Security)",
+            "Workplace Health and Safety (New)",
+            "Assessment and Development Center Exercises",
+            "Housekeeping (New)",
+            "Motivation Questionnaire MQM5",
+            "Occupational Personality Questionnaire OPQ32r"
+          ],
+          "missed": [
+            "Cardiology and Diabetes Management (New)",
+            "General Diseases (New)",
+            "Medical Terminology (New)",
+            "Pediatrics (New)"
+          ]
+        },
+        {
+          "id": "q19",
+          "query": ".NET backend developer building web APIs in C#.",
+          "recall@10": 0.875,
+          "returned": [
+            "ASP .NET with C# (New)",
+            "C# Programming (New)",
+            "ASP.NET 4.5",
+            ".NET Framework 4.5",
+            ".NET WCF (New)",
+            "RESTful Web Services (New)",
+            "Java Platform Enterprise Edition 7 (Java EE 7)",
+            "Java Web Services (New)",
+            ".NET MVC (New)",
+            "Microsoft Dynamics Development (New)"
+          ],
+          "missed": [
+            "ADO.NET (New)"
+          ]
+        },
+        {
+          "id": "q20",
+          "query": "Accountant handling accounts payable and receivable, with solid Excel skills.",
+          "recall@10": 0.875,
+          "returned": [
+            "Accounts Receivable (New)",
+            "Accounts Payable Simulation (New)",
+            "MS Excel (New)",
+            "Accounts Payable (New)",
+            "Accounts Receivable Simulation (New)",
+            "Microsoft Excel 365 (New)",
+            "Microsoft Excel 365 - Essentials (New)",
+            "MS Office Basic Computer Literacy (New)",
+            "Customer Service Phone Simulation",
+            "SAP Materials Management (New)"
+          ],
+          "missed": [
+            "Financial Accounting (New)"
+          ]
+        },
+        {
+          "id": "q21",
+          "query": "Hotel front desk receptionist.",
+          "recall@10": 0.75,
+          "returned": [
+            "Entry Level Hotel Front Desk Solution",
+            "Front Office Management (New)",
+            "Housekeeping (New)",
+            "Business Communication (adaptive)",
+            "Data Entry Alphanumeric Split Screen - US",
+            "Interpersonal Communications",
+            "Data Entry Numeric Split Screen - US",
+            "Time Management (U.S.)",
+            "Entry Level Customer Serv-Retail & Contact Center",
+            "Automata Front End"
+          ],
+          "missed": [
+            "Food and Beverage Services (New)"
+          ]
+        },
+        {
+          "id": "q22",
+          "query": "We hire people who will work fully remotely and need to manage their own time.",
+          "recall@10": 1.0,
+          "returned": [
+            "RemoteWorkQ",
+            "Time Management (U.S.)",
+            "Smart Interview Live",
+            "Multitasking Ability",
+            "Entry Level Hotel Front Desk Solution",
+            "Smart Interview Live Coding",
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Occupational Personality Questionnaire OPQ32r",
+            "Virtual Assessment and Development Centers",
+            "Project Management (2013)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q23",
+          "query": "Digital marketing specialist for campaigns, SEO and social media.",
+          "recall@10": 1.0,
+          "returned": [
+            "Digital Advertising (New)",
+            "Marketing (New)",
+            "Social Media (New)",
+            "Android Development (New)",
+            "Search Engine Optimization (New)",
+            "Training Development",
+            "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
+            "Geoinformatics Engineering (New)",
+            "Telecommunications Engineering (New)"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q24",
+          "query": "Robotic process automation developer.",
+          "recall@10": 0.667,
+          "returned": [
+            "Automation Anywhere RPA Development (New)",
+            "Automata Selenium",
+            "Micro Focus Unified Functional Testing (New)",
+            "UiPath RPA Development (New)",
+            "Manufac. & Indust. - Mechanical & Vigilance 8.0",
+            "Verify Interactive Process Monitoring",
+            "Chemical Engineering (New)",
+            "Microsoft Dynamics Development (New)",
+            "Metallurgical Engineering (New)",
+            "Manufacturing & Industrial - Vigilance Focus 8.0"
+          ],
+          "missed": [
+            "Pega Development (New)"
+          ]
+        },
+        {
+          "id": "q25",
+          "query": "Production line operators who must be dependable and follow safety rules. Keep each test under 20 minutes.",
+          "recall@10": 0.833,
+          "returned": [
+            "Manufac. & Indust. - Safety & Dependability 8.0",
+            "Production Engineering (New)",
+            "Workplace Health and Safety (New)",
+            "Following Instructions v1 - US (R2)",
+            "Production and Industrial Engineering (New)",
+            "Dependability and Safety Instrument (DSI)",
+            "Verify - Following Instructions",
+            "Petroleum Engineering (New)",
+            "Fire Engineering (New)",
+            "Following Instructions v1 - UK (R1)"
+          ],
+          "missed": [
+            "Manufacturing & Industrial - Essential Focus 8.0"
+          ]
+        },
+        {
+          "id": "q26",
+          "query": "Project manager leading agile software teams.",
+          "recall@10": 0.8,
+          "returned": [
+            "Agile Software Development",
+            "Project Management (2013)",
+            "Agile Testing (New)",
+            "Software Business Analysis",
+            "Adobe Experience Manager (New)",
+            "Management Scenarios",
+            "Executive Scenarios",
+            "Entry Level Technical Support Solution",
+            "Maven (New)",
+            "Motivation Questionnaire MQM5"
+          ],
+          "missed": [
+            "Occupational Personality Questionnaire OPQ32r"
+          ]
+        },
+        {
+          "id": "q27",
+          "query": "Spanish-speaking customer support agents for North America.",
+          "recall@10": 1.0,
+          "returned": [
+            "Customer Service Phone Simulation",
+            "Written Spanish",
+            "Desktop Support (New)",
+            "SVAR - Spoken Spanish (North American) (New)",
+            "SVAR - Spoken Spanish (Castilian) (New)",
+            "Entry Level Technical Support Solution",
+            "Entry Level Customer Service (General) Solution",
+            "Reading Comprehension - Spanish v1",
+            "Verify - Deductive Reasoning",
+            "Entry Level Customer Serv-Retail & Contact Center"
+          ],
+          "missed": []
+        },
+        {
+          "id": "q28",
+          "query": "Mobile app developer for iOS and Android.",
+          "recall@10": 1.0,
+          "returned": [
+            "Android Development (New)",
+            "iOS Development (New)",
+            "Mobility (New)",
+            "Informatica (Developer) (New)",
+            "ASP.NET 4.5",
+            "UiPath RPA Development (New)",
+            "Java 2 Platform Enterprise Edition 1.4 Fundamental",
+            "Microsoft SQL Server 2014 Programming",
+            "Salesforce Development (New)",
+            "Sales & Service Phone Solution"
+          ],
+          "missed": []
+        }
+      ]
+    }
+  ]
+}
