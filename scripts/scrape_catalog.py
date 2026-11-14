@@ -1,17 +1,16 @@
+import re
+import time
+
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import csv
-import time
 from tqdm import tqdm
-import pandas as pd
-import re
 
 BASE_URL = "https://www.shl.com"
 CATALOG_URL_TEMPLATE = "https://www.shl.com/products/product-catalog/?start={}&type=1&type=1"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0"
-}
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
 
 def fetch_html(url):
     """Fetch HTML content of a URL with a short delay and retry."""
@@ -22,11 +21,12 @@ def fetch_html(url):
         res = requests.get(url, headers=HEADERS)
     return res.text
 
+
 def parse_catalog_page(html):
     """Parse catalog page and extract basic assessment info."""
-    soup = BeautifulSoup(html, 'html.parser')
-    soup = BeautifulSoup(html, 'html.parser')
-    rows = soup.select('tr[data-entity-id]')
+    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
+    rows = soup.select("tr[data-entity-id]")
     data = []
 
     for row in rows:
@@ -34,24 +34,27 @@ def parse_catalog_page(html):
         if len(cols) < 4:
             continue
 
-        name_tag = cols[0].find('a')
+        name_tag = cols[0].find("a")
         name = name_tag.text.strip()
-        relative_url = name_tag['href']
+        relative_url = name_tag["href"]
         url = BASE_URL + relative_url
 
-        remote = "Yes" if cols[1].find('span', class_='-yes') else "No"
-        adaptive = "Yes" if cols[2].find('span', class_='-yes') else "No"
-        test_types = ','.join([span.text.strip() for span in cols[3].find_all('span')])
+        remote = "Yes" if cols[1].find("span", class_="-yes") else "No"
+        adaptive = "Yes" if cols[2].find("span", class_="-yes") else "No"
+        test_types = ",".join([span.text.strip() for span in cols[3].find_all("span")])
 
-        data.append({
-            "Assessment Name": name,
-            "URL": url,
-            "Remote Testing Support": remote,
-            "Adaptive/IRT Support": adaptive,
-            "Test Type(s)": test_types
-        })
+        data.append(
+            {
+                "Assessment Name": name,
+                "URL": url,
+                "Remote Testing Support": remote,
+                "Adaptive/IRT Support": adaptive,
+                "Test Type(s)": test_types,
+            }
+        )
 
     return data
+
 
 def parse_detail_page(url):
     """Visit the detail page twice and extract description, job levels, and duration."""
@@ -60,8 +63,8 @@ def parse_detail_page(url):
     time.sleep(1)  # Wait before the second visit
     html = fetch_html(url)
 
-    soup = BeautifulSoup(html, 'html.parser')
-    blocks = soup.select('.product-catalogue-training-calendar__row')
+    soup = BeautifulSoup(html, "html.parser")
+    blocks = soup.select(".product-catalogue-training-calendar__row")
 
     details = {"Description": "", "Job levels": "", "Duration": ""}
     for block in blocks:
@@ -82,13 +85,15 @@ def parse_detail_page(url):
 
     return details
 
+
 def clean_text(text):
     """Remove regulatory disclaimer and collapse whitespace."""
     if not isinstance(text, str):
         return text
-    text = re.sub(r'Your use of this assessment.*?shl-us-regulatory-compliance/?', '', text, flags=re.DOTALL)
-    text = re.sub(r'\s+', ' ', text).strip()
+    text = re.sub(r"Your use of this assessment.*?shl-us-regulatory-compliance/?", "", text, flags=re.DOTALL)
+    text = re.sub(r"\s+", " ", text).strip()
     return text
+
 
 def main():
     start = 0
@@ -114,20 +119,16 @@ def main():
     df = pd.DataFrame(all_data)
 
     # Rename columns for consistency
-    df.columns = [
-        'name', 'url', 'remote_support', 'adaptive_support',
-        'test_type', 'description', 'roles', 'duration'
-    ]
+    df.columns = ["name", "url", "remote_support", "adaptive_support", "test_type", "description", "roles", "duration"]
 
     # Clean descriptions
-    df['description'] = df['description'].apply(clean_text)
+    df["description"] = df["description"].apply(clean_text)
 
     # Save cleaned data
-    df.to_csv('try_shl_assessments.csv', index=False)
-  
-
+    df.to_csv("try_shl_assessments.csv", index=False)
 
     print("✅ Scraping completed. Data saved to shl_assessments.csv.")
+
 
 if __name__ == "__main__":
     main()
