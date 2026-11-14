@@ -35,6 +35,7 @@ class Options:
     decompose: bool | str = "auto"
     apply_filters: bool = True
     rerank: str = "auto"  # auto (LLM if available) | llm | balanced | none
+    parse: str = "auto"  # auto (LLM if available) | rules
 
 
 class Recommender:
@@ -49,8 +50,8 @@ class Recommender:
     def mode(self) -> str:
         return "llm" if self.llm else "rules"
 
-    def parse(self, text: str) -> Requirements:
-        if self.llm:
+    def parse(self, text: str, allow_llm: bool = True) -> Requirements:
+        if self.llm and allow_llm:
             try:
                 return parse_with_llm(self.llm, self.settings.llm_fast_model, text, self.index.skill_vocab)
             except (LLMError, ValueError, TypeError) as exc:
@@ -61,7 +62,7 @@ class Recommender:
         opts = options or Options()
         timings: dict[str, float] = {}
         t0 = time.perf_counter()
-        req = self.parse(text)
+        req = self.parse(text, allow_llm=opts.parse != "rules")
         for key, value in (overrides or {}).items():  # user edits from the UI (e.g. time limit)
             if hasattr(req, key):
                 setattr(req, key, value)
