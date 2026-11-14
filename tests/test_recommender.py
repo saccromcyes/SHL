@@ -187,3 +187,11 @@ def test_catalog_embeddings_are_cached(tmp_path, rec):
     assert index.matrix.shape == (20, 4)
     CatalogIndex(rec.items[:19], second, cache_path=str(cache))  # catalog changed: recompute
     assert second.calls == 1
+
+
+def test_provider_options_for_reasoning_models():
+    from recommender.llm import provider_options
+
+    groq = provider_options("https://api.groq.com/openai/v1", "low")
+    assert groq == {"reasoning_effort": "low", "extra_body": {"include_reasoning": False}}
+    assert provider_options("https://api.openai.com/v1", "") == {}

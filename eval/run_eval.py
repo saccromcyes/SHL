@@ -25,14 +25,22 @@ README = ROOT / "README.md"
 K = 10
 
 STAGES = [
-    ("bm25", "Keyword search (BM25)", Options(retrieval="bm25", decompose=False, rerank="none")),
-    ("dense", "Embedding search", Options(retrieval="dense", decompose=False, rerank="none")),
-    ("hybrid", "Hybrid (RRF): default without an LLM", Options(retrieval="hybrid", decompose=False, rerank="none")),
-    ("hybrid_multi", "Hybrid + one search per skill (rule parsing)", Options(retrieval="hybrid", decompose=True, rerank="none")),
+    ("bm25", "Keyword search (BM25)", Options(retrieval="bm25", decompose=False, rerank="none", parse="rules")),
+    ("dense", "Embedding search", Options(retrieval="dense", decompose=False, rerank="none", parse="rules")),
+    (
+        "hybrid",
+        "Hybrid (RRF): default without an LLM",
+        Options(retrieval="hybrid", decompose=False, rerank="none", parse="rules"),
+    ),
+    (
+        "hybrid_multi",
+        "Hybrid + one search per skill (rule parsing)",
+        Options(retrieval="hybrid", decompose=True, rerank="none", parse="rules"),
+    ),
     (
         "hybrid_multi_balanced",
         "Hybrid + per-skill search + balanced selection",
-        Options(retrieval="hybrid", decompose=True, rerank="balanced"),
+        Options(retrieval="hybrid", decompose=True, rerank="balanced", parse="rules"),
     ),
     (
         "full_llm",
@@ -96,7 +104,7 @@ def main() -> int:
     for key, label, opts in STAGES:
         if opts.rerank == "llm" and not rec.llm:
             continue
-        recalls, aps, per_query = [], [], []
+        recalls, aps, per_query, fallbacks = [], [], [], 0
         for item in labeled:
             result = rec.recommend(item["query"], opts)
             names = [r["name"] for r in result["results"]]
@@ -113,8 +121,16 @@ def main() -> int:
                     "missed": sorted(relevant - set(names[:K])),
                 }
             )
-            if opts.rerank == "llm" or result["requirements"]["parsed_by"] == "llm":
+            if opts.rerank == "llm":
+                if result["requirements"]["parsed_by"] != "llm" or result["pipeline"]["reranked_by"] != "llm":
+                    fallbacks += 1
                 time.sleep(args.pause)
+        if fallbacks > 0.1 * len(labeled):
+            print(
+                f"FAIL: the LLM was unavailable for {fallbacks} of {len(labeled)} queries; results not published.",
+                file=sys.stderr,
+            )
+            return 1
         row = {
             "stage": key,
             "label": label,

@@ -16,9 +16,11 @@ class Settings(BaseSettings):
     # Any OpenAI-compatible endpoint (Groq by default).
     llm_base_url: str = "https://api.groq.com/openai/v1"
     llm_api_key: str = ""
-    llm_model: str = "llama-3.3-70b-versatile"  # reranks and explains
-    llm_fast_model: str = "llama-3.1-8b-instant"  # parses the request
-    llm_timeout_s: float = 30.0
+    llm_model: str = "openai/gpt-oss-120b"  # reranks and explains
+    llm_fast_model: str = "openai/gpt-oss-20b"  # parses the request
+    llm_timeout_s: float = 45.0
+    llm_reasoning_effort: str = "low"  # for reasoning models (gpt-oss); set empty for models without it
+    llm_max_retries: int = 2  # retries with backoff on rate limits and transient errors
 
     embedder: str = "fastembed"  # or "hash" for tests/offline
     embed_model: str = "BAAI/bge-small-en-v1.5"

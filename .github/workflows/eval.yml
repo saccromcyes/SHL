@@ -25,8 +25,9 @@ jobs:
     env:
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_BASE_URL: ${{ vars.LLM_BASE_URL || 'https://api.groq.com/openai/v1' }}
-      LLM_MODEL: ${{ vars.LLM_MODEL || 'llama-3.3-70b-versatile' }}
-      LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL || 'llama-3.1-8b-instant' }}
+      LLM_MODEL: ${{ vars.LLM_MODEL || 'openai/gpt-oss-120b' }}
+      LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL || 'openai/gpt-oss-20b' }}
+      LLM_MAX_RETRIES: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,7 +46,7 @@ jobs:
             echo "::warning::LLM_API_KEY secret not set; running retrieval stages only"
             python -m eval.run_eval --no-llm
           else
-            python -m eval.run_eval --pause 2
+            python -m eval.run_eval --pause 10  # Groq free tier: ~8k tokens per minute per model
           fi
       - name: Commit results
         run: |
