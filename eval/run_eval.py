@@ -70,8 +70,9 @@ def render_markdown(report: dict) -> str:
         "| Pipeline stage | Mean Recall@10 | MAP@10 |",
         "|---|---|---|",
     ]
+    best = max(report["stages"], key=lambda r: (r["recall@10"], r["map@10"]))
     for row in report["stages"]:
-        bold = "**" if row is report["stages"][-1] else ""
+        bold = "**" if row is best else ""
         lines.append(f"| {bold}{row['label']}{bold} | {bold}{row['recall@10']:.3f}{bold} | {row['map@10']:.3f} |")
     return "\n".join(lines) + "\n"
 
