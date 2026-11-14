@@ -31,7 +31,7 @@ flowchart LR
 ```
 
 - **Requirement parsing.** A fast model extracts skills, job level, time limit, remote-testing needs and requested test types as JSON. Explicit limits ("under 40 minutes") are also parsed with a regex, which wins over the model when they disagree. Without an LLM, rules do the same job less flexibly.
-- **Query decomposition.** Each skill gets its own search, plus one for the whole request. The rankings are merged with weighted reciprocal rank fusion, so every skill places its best matches near the top.
+- **Query decomposition.** When an LLM has parsed the request, each skill gets its own search, plus one for the whole request, merged with weighted reciprocal rank fusion so every skill places its best matches near the top. With rule-based parsing this measured slightly *worse* than one hybrid search (Recall@10 0.756 vs 0.782 with real embeddings), so the no-LLM fallback skips it.
 - **Hybrid search.** BM25 catches exact technology names ("Kafka", "C#"); embeddings catch intent ("handles angry customers" → customer service simulations). With 377 items the dense index is a 377 × 384 matrix, so search is one matrix product; a vector database would be overhead.
 - **Coverage-aware reranking.** An LLM picks and orders the final ten from 30 candidates with explicit rules: cover every skill, include a behavioural test when soft skills matter, prefer the right job level, never invent tests. Invalid or duplicate IDs are dropped. Without an LLM, a round-robin over the per-skill rankings gives the same balance.
 - **Battery builder.** Greedily assembles the highest-ranked tests that fit the time budget together, preferring a mix of test types.
@@ -39,7 +39,7 @@ flowchart LR
 
 ## Results
 
-28 hiring requests, each labelled by hand with the assessments a recruiter would expect (169 labels in [`eval/labeled_queries.jsonl`](eval/labeled_queries.jsonl)). Each row adds one stage, so the table shows what every stage contributes.
+28 hiring requests, each labelled by hand with the assessments a recruiter would expect (169 labels in [`eval/labeled_queries.jsonl`](eval/labeled_queries.jsonl)). Each row is one configuration of the pipeline, so the table shows what each stage contributes, including the one that didn't help.
 
 <!-- EVAL:START -->
 _Results are published here automatically after the first evaluation run._

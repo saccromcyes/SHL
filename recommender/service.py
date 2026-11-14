@@ -30,7 +30,9 @@ class Options:
     """Pipeline switches, used by the evaluation to measure each stage's contribution."""
 
     retrieval: str = "hybrid"  # bm25 | dense | hybrid
-    decompose: bool = True  # one search per skill
+    # One search per skill. "auto" uses it only when an LLM parsed the request: with rule-based
+    # parsing it measured slightly worse than a single hybrid search (see eval/results).
+    decompose: bool | str = "auto"
     apply_filters: bool = True
     rerank: str = "auto"  # auto (LLM if available) | llm | balanced | none
 
@@ -65,8 +67,9 @@ class Recommender:
                 setattr(req, key, value)
         timings["parse_ms"] = round((time.perf_counter() - t0) * 1000, 1)
 
-        queries = req.search_queries if opts.decompose else [text[:500]]
-        if opts.decompose:
+        decompose = (req.parsed_by == "llm") if opts.decompose == "auto" else bool(opts.decompose)
+        queries = req.search_queries if decompose else [text[:500]]
+        if decompose:
             queries = queries + [TYPE_QUERIES[t] for t in req.test_types if t in TYPE_QUERIES]
         queries = list(dict.fromkeys(q for q in queries if q.strip())) or [text[:500]]
         filters = (
@@ -123,6 +126,7 @@ class Recommender:
             },
             "pipeline": {
                 "parsed_by": req.parsed_by,
+                "decomposed": decompose,
                 "retrieval": opts.retrieval,
                 "reranked_by": reranked_by,
                 "candidates": len(search.ranked),
