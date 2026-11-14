@@ -2,7 +2,7 @@
 name = "shl-assessment-recommender"
 version = "2.0.0"
 description = "Recommend SHL assessments from a job description: multi-query hybrid search, LLM reranking, Recall@10 evaluation."
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 license = { text = "MIT" }
 
 [tool.ruff]
