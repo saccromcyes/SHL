@@ -161,3 +161,29 @@ def test_decomposition_is_automatic_only_with_llm_parsing(rec):
     assert out["pipeline"]["parsed_by"] == "rules"
     assert out["pipeline"]["decomposed"] is False
     assert out["search_queries"] == ["Python, SQL and JavaScript developer"]
+
+
+def test_catalog_embeddings_are_cached(tmp_path, rec):
+    from recommender.search import CatalogIndex
+
+    class CountingEmbedder:
+        name = "counting"
+
+        def __init__(self):
+            self.calls = 0
+
+        def documents(self, texts):
+            import numpy as np
+
+            self.calls += 1
+            return np.ones((len(texts), 4), dtype=np.float32)
+
+    cache = tmp_path / "emb.npz"
+    first = CountingEmbedder()
+    CatalogIndex(rec.items[:20], first, cache_path=str(cache))
+    second = CountingEmbedder()
+    index = CatalogIndex(rec.items[:20], second, cache_path=str(cache))
+    assert (first.calls, second.calls) == (1, 0)
+    assert index.matrix.shape == (20, 4)
+    CatalogIndex(rec.items[:19], second, cache_path=str(cache))  # catalog changed: recompute
+    assert second.calls == 1

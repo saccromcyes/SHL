@@ -21,4 +21,5 @@ COPY --chown=user eval ./eval
 RUN python -c "from recommender.config import get_settings; from recommender.service import Recommender; r = Recommender(get_settings()); assert r.embedder.name != 'hashing', 'embedding model failed to load'"
 
 EXPOSE 7860
-CMD ["uvicorn", "recommender.main:app", "--host", "0.0.0.0", "--port", "7860", "--proxy-headers", "--forwarded-allow-ips", "*"]
+# Render (and most hosts) set PORT; default to 7860 for local runs.
+CMD ["sh", "-c", "exec uvicorn recommender.main:app --host 0.0.0.0 --port ${PORT:-7860} --proxy-headers --forwarded-allow-ips '*'"]

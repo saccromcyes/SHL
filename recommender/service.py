@@ -41,8 +41,8 @@ class Recommender:
     def __init__(self, settings: Settings):
         self.settings = settings
         self.items = load_catalog(settings.catalog_path)
-        self.embedder = build_embedder(settings.embedder, settings.embed_model, settings.model_cache_dir)
-        self.index = CatalogIndex(self.items, self.embedder, settings.rrf_k)
+        self.embedder = build_embedder(settings.embedder, settings.embed_model, settings.model_cache_dir, settings.onnx_threads)
+        self.index = CatalogIndex(self.items, self.embedder, settings.rrf_k, settings.embedding_cache)
         self.llm = LLM(settings) if settings.llm_enabled else None
 
     @property

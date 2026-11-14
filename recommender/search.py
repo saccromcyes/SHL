@@ -6,7 +6,9 @@ product. A vector database would add operational cost for no gain at this size.
 
 from __future__ import annotations
 
+import hashlib
 from dataclasses import dataclass, field
+from pathlib import Path
 
 import numpy as np
 from rank_bm25 import BM25Okapi
@@ -59,7 +61,7 @@ class SearchResult:
 
 
 class CatalogIndex:
-    def __init__(self, items: list[Assessment], embedder, rrf_k: int = 60):
+    def __init__(self, items: list[Assessment], embedder, rrf_k: int = 60, cache_path: str | None = None):
         self.items = items
         self.by_id = {a.id: a for a in items}
         self.embedder = embedder
@@ -67,8 +69,26 @@ class CatalogIndex:
         texts = [a.search_text() for a in items]
         # Names carry most of the signal ("Python (New)"), so they are repeated for BM25.
         self.bm25 = BM25Okapi([tokenize(f"{a.name} {a.name} {t}") or ["_"] for a, t in zip(items, texts)])
-        self.matrix = embedder.documents(texts)
+        self.matrix = self._embed_catalog(texts, cache_path)
         self.skill_vocab = self._skill_vocabulary()
+
+    def _embed_catalog(self, texts: list[str], cache_path: str | None) -> np.ndarray:
+        """Embedding 377 descriptions takes a few seconds on a full core but most of a minute on a
+        0.1-CPU free instance, so the matrix is cached (and baked into the Docker image)."""
+        name = getattr(self.embedder, "name", "unknown")
+        key = hashlib.sha256((name + "\n" + "\n".join(texts)).encode()).hexdigest()
+        if cache_path and Path(cache_path).exists():
+            try:
+                cached = np.load(cache_path)
+                if str(cached["key"]) == key:
+                    return cached["matrix"]
+            except (OSError, KeyError, ValueError):
+                pass
+        matrix = self.embedder.documents(texts)
+        if cache_path and name != "hashing":
+            Path(cache_path).parent.mkdir(parents=True, exist_ok=True)
+            np.savez(cache_path, matrix=matrix, key=np.array(key))
+        return matrix
 
     def _skill_vocabulary(self) -> set[str]:
         """Words that name a specific assessment (java, kafka, nursing, typing...). Used to split a

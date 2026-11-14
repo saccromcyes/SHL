@@ -23,6 +23,8 @@ class Settings(BaseSettings):
     embedder: str = "fastembed"  # or "hash" for tests/offline
     embed_model: str = "BAAI/bge-small-en-v1.5"
     model_cache_dir: str = str(ROOT / ".cache" / "models")
+    onnx_threads: int | None = None  # set to 1 on small shared CPUs to avoid thread contention
+    embedding_cache: str = str(ROOT / ".cache" / "catalog_embeddings.npz")
 
     catalog_path: str = str(ROOT / "data" / "shl_assessments.csv")
     candidates: int = 30  # how many go to the reranker

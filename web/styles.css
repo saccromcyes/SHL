@@ -40,6 +40,8 @@
   color-scheme: dark;
 }
 
+/* The hidden attribute must win over any display rule below. */
+[hidden] { display: none !important; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.55 var(--body); font-variant-numeric: tabular-nums; }
 a { color: var(--green-ink); text-underline-offset: 2px; }
