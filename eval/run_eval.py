@@ -27,10 +27,18 @@ K = 10
 STAGES = [
     ("bm25", "Keyword search (BM25)", Options(retrieval="bm25", decompose=False, rerank="none")),
     ("dense", "Embedding search", Options(retrieval="dense", decompose=False, rerank="none")),
-    ("hybrid", "Hybrid (RRF)", Options(retrieval="hybrid", decompose=False, rerank="none")),
-    ("hybrid_multi", "+ one search per skill", Options(retrieval="hybrid", decompose=True, rerank="none")),
-    ("hybrid_multi_balanced", "+ balanced selection", Options(retrieval="hybrid", decompose=True, rerank="balanced")),
-    ("full_llm", "+ LLM rerank (full pipeline)", Options(retrieval="hybrid", decompose=True, rerank="llm")),
+    ("hybrid", "Hybrid (RRF): default without an LLM", Options(retrieval="hybrid", decompose=False, rerank="none")),
+    ("hybrid_multi", "Hybrid + one search per skill (rule parsing)", Options(retrieval="hybrid", decompose=True, rerank="none")),
+    (
+        "hybrid_multi_balanced",
+        "Hybrid + per-skill search + balanced selection",
+        Options(retrieval="hybrid", decompose=True, rerank="balanced"),
+    ),
+    (
+        "full_llm",
+        "LLM parsing + per-skill search + LLM rerank (full pipeline)",
+        Options(retrieval="hybrid", decompose=True, rerank="llm"),
+    ),
 ]
 
 
