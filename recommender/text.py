@@ -61,11 +61,11 @@ class HashEmbedder:
 
 
 class FastEmbedEmbedder:
-    def __init__(self, model_name: str, cache_dir: str):
+    def __init__(self, model_name: str, cache_dir: str, threads: int | None = None):
         from fastembed import TextEmbedding
 
         self.name = model_name
-        self._model = TextEmbedding(model_name=model_name, cache_dir=cache_dir)
+        self._model = TextEmbedding(model_name=model_name, cache_dir=cache_dir, threads=threads)
 
     @staticmethod
     def _normalise(m: np.ndarray) -> np.ndarray:
@@ -78,10 +78,10 @@ class FastEmbedEmbedder:
         return self._normalise(np.stack(list(self._model.query_embed(texts))).astype(np.float32))
 
 
-def build_embedder(kind: str, model_name: str, cache_dir: str):
+def build_embedder(kind: str, model_name: str, cache_dir: str, threads: int | None = None):
     if kind == "fastembed":
         try:
-            return FastEmbedEmbedder(model_name, cache_dir)
+            return FastEmbedEmbedder(model_name, cache_dir, threads)
         except Exception as exc:
             log.warning("FastEmbed unavailable (%s); using hash embeddings", exc)
     return HashEmbedder()

@@ -1,12 +1,12 @@
 # SHL Assessment Recommender
 
 [![CI](https://github.com/saccromcyes/SHL/actions/workflows/ci.yml/badge.svg)](https://github.com/saccromcyes/SHL/actions/workflows/ci.yml)
-[![Live demo](https://img.shields.io/badge/live%20demo-Hugging%20Face-0E6B4D)](https://huggingface.co/spaces/saccromcyes/shl-recommender)
+[![Live demo](https://img.shields.io/badge/live%20demo-Render-0E6B4D)](https://saccromcyes-shl.onrender.com)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 Paste a job description (or a link to one) and get up to ten assessments from SHL's catalog of 377 products that **cover every skill the role needs, fit the time limit, and come with a reason for each pick**. It also proposes a test battery that fits the candidate's session.
 
-**[Try it →](https://huggingface.co/spaces/saccromcyes/shl-recommender)**
+**[Try it →](https://saccromcyes-shl.onrender.com)** It runs on a free tier, so if nobody has used it for a while the first visit takes about a minute to wake up.
 
 <!-- Screenshot added after the first deploy: docs/screenshot.png -->
 
@@ -80,7 +80,7 @@ pytest                               # 33 tests, offline
 python -m eval.run_eval --no-llm     # retrieval stages; add LLM_API_KEY for the full pipeline
 ```
 
-Deployment to Hugging Face Spaces runs from GitHub Actions after CI passes: set secrets `HF_TOKEN` and `LLM_API_KEY`, and variable `HF_SPACE`.
+**Deployment.** The app runs on Render's free tier (512 MB of memory, a tenth of a CPU core), defined in the [Blueprint](https://github.com/saccromcyes/saccromcyes.github.io/blob/main/render.yaml) that deploys all of my demos; every push to `main` that passes CI redeploys it. The CI job *Fits Render free tier* starts the production image under exactly those limits, sends a real request, and fails if the app runs out of memory or doesn't become healthy, so a change can't silently break the live demo.
 
 ## Project layout
 

@@ -40,3 +40,20 @@ jobs:
       - run: pip install -r requirements.txt
       # Fails the build if retrieval-only Recall@10 drops (no LLM needed).
       - run: python -m eval.run_eval --no-llm --no-write --fail-under-recall 0.55
+
+  free-tier:
+    name: Fits Render free tier (512 MB, 0.1 CPU)
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the production image
+        run: docker build -t app .
+      - name: Start it inside the free-tier limits and send a real request
+        run: bash scripts/free_tier_smoke.sh
+        env:
+          HEALTH: '/health'
+          METHOD: 'POST'
+          REQ_PATH: '/api/recommend'
+          BODY: '{"query": "Java developers who collaborate with business teams, each test under 40 minutes"}'
+          EXPECT: '"results"'
