@@ -1,6 +1,6 @@
 {
-  "run_at": "2026-11-14T22:03:07+00:00",
-  "commit": "f3d7be0",
+  "run_at": "2026-11-16T11:31:26+00:00",
+  "commit": "bd8de16",
   "embedder": "BAAI/bge-small-en-v1.5",
   "llm": null,
   "n_queries": 28,
@@ -85,9 +85,9 @@
             "Contact Center Call Simulation (New)",
             "Customer Service Phone Simulation",
             "Entry Level Customer Serv-Retail & Contact Center",
-            "SVAR - Spoken English (U.K.)",
             "SVAR - Spoken English (US) (New)",
             "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (U.K.)",
             "SVAR - Spoken English (Indian Accent) (New)",
             "Customer Service Phone Solution",
             "Entry Level Cashier Solution",
@@ -174,7 +174,7 @@
             "Agile Testing (New)",
             "Adobe Experience Manager (New)",
             "UiPath RPA Development (New)",
-            "AngularJS (New)"
+            "Jenkins (New)"
           ],
           "missed": [
             "Load Runner (New)"
@@ -291,12 +291,12 @@
           "returned": [
             "Written English v1",
             "WriteX - Email Writing (Managerial) (New)",
-            "WriteX - Email Writing (Sales) (New)",
             "WriteX - Email Writing (Customer Service) (New)",
+            "WriteX - Email Writing (Sales) (New)",
             "Written Spanish",
+            "SVAR - Spoken English (US) (New)",
             "SVAR - Spoken English (AUS)",
             "SVAR - Spoken English (U.K.)",
-            "SVAR - Spoken English (US) (New)",
             "SVAR - Spoken English (Indian Accent) (New)",
             "English Comprehension (New)"
           ],
@@ -434,8 +434,8 @@
             "Housekeeping (New)",
             "MS PowerPoint (New)",
             "Written Spanish",
-            "Data Entry Ten Key Split Screen",
             "Interviewing and Hiring Concepts (U.S.)",
+            "Data Entry Ten Key Split Screen",
             "Following Instructions v1 - US (R2)"
           ],
           "missed": [
@@ -469,13 +469,13 @@
           "returned": [
             "Social Media (New)",
             "Digital Advertising (New)",
-            "Search Engine Optimization (New)",
             "Marketing (New)",
+            "Search Engine Optimization (New)",
             "Android Development (New)",
             "Geoinformatics Engineering (New)",
             "Training Development",
             "Telecommunications Engineering (New)",
-            "Electronics and Semiconductor Engineering (New)",
+            "Electronics & Telecommunications Engineering (New)",
             "Electronics and Embedded Systems Engineering (New)"
           ],
           "missed": []
@@ -1243,8 +1243,8 @@
             "SVAR - Spoken English (US) (New)",
             "Sales & Service Phone Solution",
             "Sales & Service Phone Simulation",
-            "SVAR - Spoken English (U.K.)",
-            "SVAR - Spoken English (AUS)"
+            "SVAR - Spoken English (AUS)",
+            "Entry Level Sales Solution"
           ],
           "missed": [
             "Conversational Multichat Simulation",
@@ -1586,9 +1586,9 @@
             "Front Office Management (New)",
             "Housekeeping (New)",
             "Business Communication (adaptive)",
-            "Data Entry Alphanumeric Split Screen - US",
             "Interpersonal Communications",
             "Data Entry Numeric Split Screen - US",
+            "Data Entry Alphanumeric Split Screen - US",
             "Time Management (U.S.)",
             "Entry Level Customer Serv-Retail & Contact Center",
             "Automata Front End"
@@ -1620,13 +1620,13 @@
           "query": "Digital marketing specialist for campaigns, SEO and social media.",
           "recall@10": 1.0,
           "returned": [
+            "Marketing (New)",
             "Digital Advertising (New)",
             "Social Media (New)",
-            "Marketing (New)",
             "Search Engine Optimization (New)",
             "Sales Transformation 2.0 - Individual Contributor",
-            "Sales Transformation 1.0 - Individual Contributor",
             "Geoinformatics Engineering (New)",
+            "Sales Transformation 1.0 - Individual Contributor",
             "Telecommunications Engineering (New)",
             "Smart Interview Live",
             "Android Development (New)"
@@ -1791,8 +1791,8 @@
             "Occupational Personality Questionnaire OPQ32r",
             "Motivation Questionnaire MQM5",
             "Dependability and Safety Instrument (DSI)",
-            "Sales Transformation 1.0 - Individual Contributor",
             "Sales Transformation 2.0 - Individual Contributor",
+            "Sales Transformation 1.0 - Individual Contributor",
             "Entry Level Cashier Solution",
             "Verify - General Ability Screen"
           ],
@@ -1814,8 +1814,8 @@
             "Contact Center Call Simulation (New)",
             "Entry Level Customer Serv-Retail & Contact Center",
             "SVAR - Spoken English (US) (New)",
-            "SVAR - Spoken English (U.K.)",
             "SVAR - Spoken English (AUS)",
+            "SVAR - Spoken English (U.K.)",
             "SVAR - Spoken English (Indian Accent) (New)",
             "Virtual Assessment and Development Centers",
             "Smart Interview Live",
@@ -1901,8 +1901,8 @@
             "Agile Testing (New)",
             "ETL Testing (New)",
             "UiPath RPA Development (New)",
-            "AngularJS (New)",
-            "Jenkins (New)"
+            "Jenkins (New)",
+            "AngularJS (New)"
           ],
           "missed": [
             "Load Runner (New)"
@@ -2018,12 +2018,12 @@
             "Virtual Assessment and Development Centers",
             "Written Spanish",
             "WriteX - Email Writing (Managerial) (New)",
-            "SVAR - Spoken English (AUS)",
             "WriteX - Email Writing (Sales) (New)",
+            "SVAR - Spoken English (AUS)",
             "Reading Comprehension - English v1",
             "WriteX - Email Writing (Customer Service) (New)",
-            "SVAR - Spoken English (U.K.)",
-            "English Comprehension (New)"
+            "English Comprehension (New)",
+            "Smart Interview Live Coding"
           ],
           "missed": [
             "Business Communications",
@@ -2162,9 +2162,9 @@
             "Front Office Management (New)",
             "Housekeeping (New)",
             "Business Communication (adaptive)",
-            "Data Entry Alphanumeric Split Screen - US",
             "Interpersonal Communications",
             "Data Entry Numeric Split Screen - US",
+            "Data Entry Alphanumeric Split Screen - US",
             "Time Management (U.S.)",
             "Entry Level Customer Serv-Retail & Contact Center",
             "Automata Front End"
@@ -2197,14 +2197,14 @@
           "recall@10": 1.0,
           "returned": [
             "Social Media (New)",
-            "Digital Advertising (New)",
             "Marketing (New)",
+            "Digital Advertising (New)",
             "Android Development (New)",
             "Training Development",
             "Search Engine Optimization (New)",
             "Sales Transformation 2.0 - Individual Contributor",
-            "Sales Transformation 1.0 - Individual Contributor",
             "Geoinformatics Engineering (New)",
+            "Sales Transformation 1.0 - Individual Contributor",
             "Telecommunications Engineering (New)"
           ],
           "missed": []
@@ -2316,7 +2316,7 @@
       "stage": "hybrid_multi_balanced",
       "label": "Hybrid + per-skill search + balanced selection",
       "recall@10": 0.756,
-      "map@10": 0.661,
+      "map@10": 0.663,
       "queries": [
         {
           "id": "q01",
@@ -2394,9 +2394,9 @@
             "Entry Level Customer Serv-Retail & Contact Center",
             "Customer Service Phone Solution",
             "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (US) (New)",
             "Smart Interview Live",
             "Virtual Assessment and Development Centers",
-            "SVAR - Spoken English (US) (New)",
             "SVAR - Spoken English (Indian Accent) (New)"
           ],
           "missed": [
@@ -2582,10 +2582,10 @@
             "WriteX - Email Writing (Managerial) (New)",
             "Sales & Service Phone Solution",
             "Entry Level Customer Serv-Retail & Contact Center",
-            "WriteX - Email Writing (Customer Service) (New)",
+            "WriteX - Email Writing (Sales) (New)",
             "Sales & Service Phone Simulation",
             "Entry Level Cashier Solution",
-            "WriteX - Email Writing (Sales) (New)",
+            "WriteX - Email Writing (Customer Service) (New)",
             "Multitasking Ability",
             "MS Office Basic Computer Literacy (Sim) (New)"
           ],
@@ -2602,10 +2602,10 @@
             "SVAR - Spoken English (AUS)",
             "WriteX - Email Writing (Managerial) (New)",
             "Written Spanish",
-            "SVAR - Spoken English (U.K.)",
+            "SVAR - Spoken English (US) (New)",
             "WriteX - Email Writing (Sales) (New)",
             "Business Communications",
-            "SVAR - Spoken English (US) (New)",
+            "SVAR - Spoken English (U.K.)",
             "WriteX - Email Writing (Customer Service) (New)",
             "Business Communication (adaptive)"
           ],
@@ -2747,9 +2747,9 @@
             "Front Office Management (New)",
             "Housekeeping (New)",
             "Business Communication (adaptive)",
-            "Data Entry Alphanumeric Split Screen - US",
             "Interpersonal Communications",
             "Data Entry Numeric Split Screen - US",
+            "Data Entry Alphanumeric Split Screen - US",
             "Time Management (U.S.)",
             "Entry Level Customer Serv-Retail & Contact Center",
             "Automata Front End"
@@ -2781,15 +2781,15 @@
           "query": "Digital marketing specialist for campaigns, SEO and social media.",
           "recall@10": 1.0,
           "returned": [
-            "Digital Advertising (New)",
             "Marketing (New)",
             "Social Media (New)",
+            "Digital Advertising (New)",
             "Android Development (New)",
             "Search Engine Optimization (New)",
             "Training Development",
             "Sales Transformation 2.0 - Individual Contributor",
-            "Sales Transformation 1.0 - Individual Contributor",
             "Geoinformatics Engineering (New)",
+            "Sales Transformation 1.0 - Individual Contributor",
             "Telecommunications Engineering (New)"
           ],
           "missed": []

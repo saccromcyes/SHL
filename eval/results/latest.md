@@ -1,4 +1,4 @@
-_Last run 2026-11-14, commit `f3d7be0`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
+_Last run 2026-11-16, commit `bd8de16`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
 
 | Pipeline stage | Mean Recall@10 | MAP@10 |
 |---|---|---|
@@ -6,4 +6,4 @@ _Last run 2026-11-14, commit `f3d7be0`, embeddings `BAAI/bge-small-en-v1.5`, LLM
 | Embedding search | 0.704 | 0.583 |
 | **Hybrid (RRF): default without an LLM** | **0.782** | 0.692 |
 | Hybrid + one search per skill (rule parsing) | 0.756 | 0.647 |
-| Hybrid + per-skill search + balanced selection | 0.756 | 0.661 |
+| Hybrid + per-skill search + balanced selection | 0.756 | 0.663 |
