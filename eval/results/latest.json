@@ -1,6 +1,6 @@
 {
-  "run_at": "2026-11-16T11:31:26+00:00",
-  "commit": "bd8de16",
+  "run_at": "2026-11-23T12:56:20+00:00",
+  "commit": "60efbb7",
   "embedder": "BAAI/bge-small-en-v1.5",
   "llm": null,
   "n_queries": 28,

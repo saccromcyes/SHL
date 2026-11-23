@@ -42,7 +42,7 @@ flowchart LR
 28 hiring requests, each labelled by hand with the assessments a recruiter would expect (169 labels in [`eval/labeled_queries.jsonl`](eval/labeled_queries.jsonl)). Each row is one configuration of the pipeline, so the table shows what each stage contributes, including the one that didn't help.
 
 <!-- EVAL:START -->
-_Last run 2026-11-16, commit `bd8de16`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
+_Last run 2026-11-23, commit `60efbb7`, embeddings `BAAI/bge-small-en-v1.5`, LLM `none`. 28 labeled queries, 169 relevant assessments._
 
 | Pipeline stage | Mean Recall@10 | MAP@10 |
 |---|---|---|
